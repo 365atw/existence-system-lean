@@ -1,0 +1,14 @@
+name = "ExistenceSystem"
+defaultTargets = ["ExistenceSystem"]
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.35.0-rc4"
+
+[[lean_lib]]
+name = "ExistenceSystem"
