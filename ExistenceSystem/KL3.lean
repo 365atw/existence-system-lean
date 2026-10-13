@@ -106,8 +106,7 @@ theorem critical_set_ncard (r : ℝ) (hr : 0 < r) :
 /-! ## 3. The minimizer set
 
 Note L434: "> **The minimizer set has more than one element, so minimizing is not a selection rule.**"
-Note L436: "*Not* "the free branch fails to be a minimizer." Both branches **are** minimizers, and that
-is exactly why the functional cannot choose."
+Note L436: "*Not* "the free branch fails to be a minimizer." Both branches **are** minimizers, and that is exactly why the functional cannot choose."
 -/
 
 /-- Every value of `V` is at least the branch depth `-r²/4`. -/
@@ -136,8 +135,8 @@ theorem minimizers_eq (r : ℝ) (hr : 0 < r) :
     · rw [hb1]; exact V_ge_depth r y
     · rw [hb2]; exact V_ge_depth r y
 
-/-- Note L434: "**The minimizer set has more than one element, so minimizing is not a selection
-rule.**" — the mathematical half: the minimizer set has more than one element. -/
+/-- Note L434: "**The minimizer set has more than one element, so minimizing is not a selection rule.**"
+— the mathematical half: the minimizer set has more than one element. -/
 theorem minimizers_nontrivial (r : ℝ) (hr : 0 < r) :
     {x : ℝ | ∀ y : ℝ, V r x ≤ V r y}.Nontrivial := by
   rw [minimizers_eq r hr]
