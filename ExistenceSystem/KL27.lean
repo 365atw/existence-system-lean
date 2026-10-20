@@ -95,8 +95,9 @@ theorem traceForm_self_adjoint (x y : K) :
 theorem fold_fixed (x : K) : star (x + star x) = x + star x := by
   rw [star_add, star_star, add_comm (star x) x]
 
-/-- Note L1044/L1048: the fold `x + σ(x)` is the trace, a scalar (image of `algebraMap ℚ`) — "a whole
-number" at the faces (Part A: `trace` of the coil face is `L_{3k}`). -/
+/-- Note L1044/L1048: the fold `x + σ(x)` equals the trace, a scalar (image of `algebraMap ℚ`). The
+whole-number value `L_{3k}` at the faces is the real-valued fold proved separately in Part A
+(`fold_eq_lucas`); it is not proved here for the coil face in `K`. -/
 theorem fold_eq_algebraMap_trace (x : K) :
     x + star x = algebraMap ℚ K (QuadraticAlgebra.trace x) :=
   (algebraMap_trace_eq_add_star x).symm
