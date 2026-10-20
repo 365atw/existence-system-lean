@@ -10,3 +10,38 @@ open ExistenceSystem.KL3
 #print axioms minimizers_nontrivial
 #print axioms minimizers_ncard
 #print axioms flow_eq_neg_deriv
+
+open ExistenceSystem.KL18
+#print axioms lucas
+#print axioms goldenRatio_pow_add_goldenConj_pow
+#print axioms goldenConj_eq_one_sub
+#print axioms conj_neg
+#print axioms conj_abs_lt_one
+#print axioms goldenConj_pow_tendsto_zero
+#print axioms fold_coil
+#print axioms fold_coil_zero
+#print axioms goldenRatio_pow_succ_irrational
+#print axioms goldenConj_pow_succ_irrational
+#print axioms face_par_irrational
+#print axioms face_perp_irrational
+#print axioms norm_pair
+#print axioms norm_pair_abs
+#print axioms residual_pos
+#print axioms residual_tendsto_zero
+#print axioms piswap_trace
+
+open ExistenceSystem.KL27
+#print axioms ExistenceSystem.KL27.fold_eq_lucas
+#print axioms diff_eq_sqrt5_fib
+#print axioms no_rational_root
+#print axioms sigma_involutive
+#print axioms traceForm_self_adjoint
+#print axioms fold_fixed
+#print axioms fold_eq_algebraMap_trace
+#print axioms diff_antifixed
+#print axioms diff_trace_zero
+#print axioms star_algebraMap_rat
+#print axioms reflection_decomposition
+#print axioms fixed_iff_scalar
+#print axioms antifixed_iff_trace_zero
+#print axioms eigenvalue_eq_one_or_neg_one
