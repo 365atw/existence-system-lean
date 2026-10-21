@@ -18,6 +18,10 @@
 'ExistenceSystem.KL3.minimizers_nontrivial' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ExistenceSystem.KL3.minimizers_ncard' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ExistenceSystem.KL3.flow_eq_neg_deriv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL13.residual_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL14.fixedPoint_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL14.ascent_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL15.piSwap_eq_m' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ExistenceSystem.KL18.lucas' does not depend on any axioms
 'ExistenceSystem.KL18.goldenRatio_pow_add_goldenConj_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ExistenceSystem.KL18.goldenConj_eq_one_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
