@@ -4,6 +4,19 @@ Lean 4 + Mathlib formalisation of results from THE EXACT AND FREE SYSTEM — AN 
 
 All mathematics: Kari A Light.
 
+## KL1 — the per-dimension uniqueness result (`ExistenceSystem/KL1.lean`)
+
+For every integer `n ≥ 2`, `f(x) = x^n - x - 1` has exactly one positive real root, in `(1, 2)`.
+Proved with no `sorry`, `admit`, or new axioms:
+
+- `existsUnique_pos_root`, `r_mem_Ioo`: exactly one positive root, and `rₙ ∈ (1, 2)` (Descartes' upper bound `Polynomial.roots_countP_pos_le_signVariations`; existence by `intermediate_value_Ioo`)
+- `r_pow`, `r_succ_lt`, `one_lt_r`, `tendsto_r`: `rₙ^n = rₙ + 1`, `rₙ₊₁ < rₙ`, bounded below by 1, and `rₙ → 1`
+- `planar_face`: `φ = r₂` (Mathlib's `Real.goldenRatio`)
+- `spatial_face`, `rho_cube`, `rho_unique`: the plastic number `ρ = r₃`, the unique positive root of `x^3 = x + 1`
+
+Her words are quoted beside each statement with line numbers from the Note.
+Only that mathematics is formalised; the prose on Note L86 after the mathematical sentence, and the picture in §1.2, are not encoded.
+
 ## KL3 — the indifference theorem (`ExistenceSystem/KL3.lean`)
 
 For `V(x) = -(r/2)x² + ¼x⁴` with `r > 0`, proved with no `sorry`, `admit`, or new axioms:
