@@ -1,4 +1,16 @@
 import ExistenceSystem
+open ExistenceSystem.KL1
+#print axioms existsUnique_pos_root
+#print axioms r_mem_Ioo
+#print axioms r_pow
+#print axioms r_succ_lt
+#print axioms one_lt_r
+#print axioms tendsto_r
+#print axioms planar_face
+#print axioms spatial_face
+#print axioms rho_cube
+#print axioms rho_unique
+
 open ExistenceSystem.KL3
 #print axioms V_branches
 #print axioms V_even
