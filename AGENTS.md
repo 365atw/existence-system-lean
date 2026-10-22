@@ -3,7 +3,7 @@
 This file is the project's committed home for project-intrinsic agent knowledge: build, test, release, architecture, and sharp-edge notes that should travel with the code.
 
 - Build with `lake build`. Audit axioms with `lake env lean checks/PrintAxioms.lean`. The bar is only `propext`, `Classical.choice`, and `Quot.sound`. Output is in `logs/lake-build.log` and `logs/print-axioms.log`.
-- What each statement encodes, and what is left as prose, is in `README.md` and the module headers under `ExistenceSystem/`. `KL13.residual` is the coil sequence for KL13 and KL14; `KL18.residual` stays the merged copy (see the KL13 header).
+- What each statement encodes, and what is left as prose, is in `README.md` and the module headers under `ExistenceSystem/`. `KL13.residual` is the coil sequence for KL13 and KL14; `KL18.residual` stays the merged copy (see the KL13 header). `ExistenceSystem/TheThing.lean` is `K = ℚ(√−5)`; `ζ_K(s) = ζ(s)·L(s, χ_{−20})` is the named gap `dedekindZeta_factorization_gap`, not a theorem.
 
 ## Maintaining this file
 
