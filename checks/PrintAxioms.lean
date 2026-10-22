@@ -1,33 +1,40 @@
 import ExistenceSystem
-open ExistenceSystem.KL1
-#print axioms existsUnique_pos_root
-#print axioms r_mem_Ioo
-#print axioms r_pow
-#print axioms r_succ_lt
-#print axioms one_lt_r
-#print axioms tendsto_r
-#print axioms planar_face
-#print axioms spatial_face
-#print axioms rho_cube
-#print axioms rho_unique
 
-open ExistenceSystem.KL2
-#print axioms minpoly_omega
-#print axioms minpoly_phi
-#print axioms carries_minpoly
-#print axioms agree
+/-!
+Axiom audit list. Each line is one fully qualified `#print axioms` declaration.
+Qualified names keep a union merge (`merge=union` in `.gitattributes`) from
+depending on an `open` scope.
 
-open ExistenceSystem.KL3
-#print axioms V_branches
-#print axioms V_even
-#print axioms hasDerivAt_V
-#print axioms deriv_V_eq_zero_iff
-#print axioms critical_set
-#print axioms critical_set_ncard
-#print axioms minimizers_eq
-#print axioms minimizers_nontrivial
-#print axioms minimizers_ncard
-#print axioms flow_eq_neg_deriv
+`checks/item-logs.sh` writes `logs/<Item>-build.log` and
+`logs/<Item>-print-axioms.log`. Pass an item name to record only that item.
+-/
+
+#print axioms ExistenceSystem.KL1.existsUnique_pos_root
+#print axioms ExistenceSystem.KL1.r_mem_Ioo
+#print axioms ExistenceSystem.KL1.r_pow
+#print axioms ExistenceSystem.KL1.r_succ_lt
+#print axioms ExistenceSystem.KL1.one_lt_r
+#print axioms ExistenceSystem.KL1.tendsto_r
+#print axioms ExistenceSystem.KL1.planar_face
+#print axioms ExistenceSystem.KL1.spatial_face
+#print axioms ExistenceSystem.KL1.rho_cube
+#print axioms ExistenceSystem.KL1.rho_unique
+
+#print axioms ExistenceSystem.KL2.minpoly_omega
+#print axioms ExistenceSystem.KL2.minpoly_phi
+#print axioms ExistenceSystem.KL2.carries_minpoly
+#print axioms ExistenceSystem.KL2.agree
+
+#print axioms ExistenceSystem.KL3.V_branches
+#print axioms ExistenceSystem.KL3.V_even
+#print axioms ExistenceSystem.KL3.hasDerivAt_V
+#print axioms ExistenceSystem.KL3.deriv_V_eq_zero_iff
+#print axioms ExistenceSystem.KL3.critical_set
+#print axioms ExistenceSystem.KL3.critical_set_ncard
+#print axioms ExistenceSystem.KL3.minimizers_eq
+#print axioms ExistenceSystem.KL3.minimizers_nontrivial
+#print axioms ExistenceSystem.KL3.minimizers_ncard
+#print axioms ExistenceSystem.KL3.flow_eq_neg_deriv
 
 #print axioms ExistenceSystem.KL13.residual_pos
 
@@ -36,40 +43,38 @@ open ExistenceSystem.KL3
 
 #print axioms ExistenceSystem.KL15.piSwap_eq_m
 
-open ExistenceSystem.KL18
-#print axioms lucas
-#print axioms goldenRatio_pow_add_goldenConj_pow
-#print axioms goldenConj_eq_one_sub
-#print axioms conj_neg
-#print axioms conj_abs_lt_one
-#print axioms goldenConj_pow_tendsto_zero
-#print axioms fold_coil
-#print axioms fold_coil_zero
-#print axioms goldenRatio_pow_succ_irrational
-#print axioms goldenConj_pow_succ_irrational
-#print axioms face_par_irrational
-#print axioms face_perp_irrational
-#print axioms norm_pair
-#print axioms norm_pair_abs
-#print axioms residual_pos
-#print axioms residual_tendsto_zero
-#print axioms piswap_trace
+#print axioms ExistenceSystem.KL18.lucas
+#print axioms ExistenceSystem.KL18.goldenRatio_pow_add_goldenConj_pow
+#print axioms ExistenceSystem.KL18.goldenConj_eq_one_sub
+#print axioms ExistenceSystem.KL18.conj_neg
+#print axioms ExistenceSystem.KL18.conj_abs_lt_one
+#print axioms ExistenceSystem.KL18.goldenConj_pow_tendsto_zero
+#print axioms ExistenceSystem.KL18.fold_coil
+#print axioms ExistenceSystem.KL18.fold_coil_zero
+#print axioms ExistenceSystem.KL18.goldenRatio_pow_succ_irrational
+#print axioms ExistenceSystem.KL18.goldenConj_pow_succ_irrational
+#print axioms ExistenceSystem.KL18.face_par_irrational
+#print axioms ExistenceSystem.KL18.face_perp_irrational
+#print axioms ExistenceSystem.KL18.norm_pair
+#print axioms ExistenceSystem.KL18.norm_pair_abs
+#print axioms ExistenceSystem.KL18.residual_pos
+#print axioms ExistenceSystem.KL18.residual_tendsto_zero
+#print axioms ExistenceSystem.KL18.piswap_trace
 
-open ExistenceSystem.KL27
 #print axioms ExistenceSystem.KL27.fold_eq_lucas
-#print axioms diff_eq_sqrt5_fib
-#print axioms no_rational_root
-#print axioms sigma_involutive
-#print axioms traceForm_self_adjoint
-#print axioms fold_fixed
-#print axioms fold_eq_algebraMap_trace
-#print axioms diff_antifixed
-#print axioms diff_trace_zero
-#print axioms star_algebraMap_rat
-#print axioms reflection_decomposition
-#print axioms fixed_iff_scalar
-#print axioms antifixed_iff_trace_zero
-#print axioms eigenvalue_eq_one_or_neg_one
+#print axioms ExistenceSystem.KL27.diff_eq_sqrt5_fib
+#print axioms ExistenceSystem.KL27.no_rational_root
+#print axioms ExistenceSystem.KL27.sigma_involutive
+#print axioms ExistenceSystem.KL27.traceForm_self_adjoint
+#print axioms ExistenceSystem.KL27.fold_fixed
+#print axioms ExistenceSystem.KL27.fold_eq_algebraMap_trace
+#print axioms ExistenceSystem.KL27.diff_antifixed
+#print axioms ExistenceSystem.KL27.diff_trace_zero
+#print axioms ExistenceSystem.KL27.star_algebraMap_rat
+#print axioms ExistenceSystem.KL27.reflection_decomposition
+#print axioms ExistenceSystem.KL27.fixed_iff_scalar
+#print axioms ExistenceSystem.KL27.antifixed_iff_trace_zero
+#print axioms ExistenceSystem.KL27.eigenvalue_eq_one_or_neg_one
 
 #print axioms ExistenceSystem.Lucas.lucas
 #print axioms ExistenceSystem.Lucas.lucas_zero
@@ -144,48 +149,47 @@ open ExistenceSystem.KL27
 #print axioms ExistenceSystem.EulerLagrange.ibp_frechet
 #print axioms ExistenceSystem.EulerLagrange.ibp_sum_directions
 
-open ExistenceSystem.TheThing
-#print axioms int_coord_unique
-#print axioms discr_eq_neg_twenty
-#print axioms intNorm_pair
-#print axioms isUnit_iff
-#print axioms no_norm_two
-#print axioms no_norm_three
-#print axioms nrRealPlaces_eq_zero
-#print axioms nrComplexPlaces_eq_one
-#print axioms minkowskiBound_lt_three
-#print axioms p₂_sq
-#print axioms p₃_mul_p₃'
-#print axioms p₂_mul_p₃
-#print axioms p₂_mul_p₃'
-#print axioms span_six_eq_two_mul_three
-#print axioms span_six_eq_prime_factors
-#print axioms span_six_eq_conj_factors
-#print axioms six_factorizations
-#print axioms irreducible_two
-#print axioms irreducible_three
-#print axioms irreducible_one_add
-#print axioms irreducible_one_sub
-#print axioms two_not_prime
-#print axioms not_uniqueFactorization_elements
-#print axioms uniqueFactorization_ideals
-#print axioms factorizations_not_associated
-#print axioms p₂_not_principal
-#print axioms p₂_order
-#print axioms eq_p₂_of_absNorm_eq_two
-#print axioms class_eq_one_or_p₂
-#print axioms classGroup_card_eq_two
-#print axioms classNumber_eq_two
-#print axioms classGroup_isCyclic
-#print axioms not_principalIdealRing
-#print axioms p₃_class_eq_p₂
-#print axioms p₃'_class_eq_p₂
-#print axioms χ_neg20_level
-#print axioms χ_neg20_eq_mul
-#print axioms three_char_eq_one
-#print axioms legendre_five_neg_one
-#print axioms χ_neg20_split
-#print axioms split_of_norm_two_p
-#print axioms seven_home
-#print axioms sixtySeven_home
-#print axioms oneHundredSeven_home
+#print axioms ExistenceSystem.TheThing.int_coord_unique
+#print axioms ExistenceSystem.TheThing.discr_eq_neg_twenty
+#print axioms ExistenceSystem.TheThing.intNorm_pair
+#print axioms ExistenceSystem.TheThing.isUnit_iff
+#print axioms ExistenceSystem.TheThing.no_norm_two
+#print axioms ExistenceSystem.TheThing.no_norm_three
+#print axioms ExistenceSystem.TheThing.nrRealPlaces_eq_zero
+#print axioms ExistenceSystem.TheThing.nrComplexPlaces_eq_one
+#print axioms ExistenceSystem.TheThing.minkowskiBound_lt_three
+#print axioms ExistenceSystem.TheThing.p₂_sq
+#print axioms ExistenceSystem.TheThing.p₃_mul_p₃'
+#print axioms ExistenceSystem.TheThing.p₂_mul_p₃
+#print axioms ExistenceSystem.TheThing.p₂_mul_p₃'
+#print axioms ExistenceSystem.TheThing.span_six_eq_two_mul_three
+#print axioms ExistenceSystem.TheThing.span_six_eq_prime_factors
+#print axioms ExistenceSystem.TheThing.span_six_eq_conj_factors
+#print axioms ExistenceSystem.TheThing.six_factorizations
+#print axioms ExistenceSystem.TheThing.irreducible_two
+#print axioms ExistenceSystem.TheThing.irreducible_three
+#print axioms ExistenceSystem.TheThing.irreducible_one_add
+#print axioms ExistenceSystem.TheThing.irreducible_one_sub
+#print axioms ExistenceSystem.TheThing.two_not_prime
+#print axioms ExistenceSystem.TheThing.not_uniqueFactorization_elements
+#print axioms ExistenceSystem.TheThing.uniqueFactorization_ideals
+#print axioms ExistenceSystem.TheThing.factorizations_not_associated
+#print axioms ExistenceSystem.TheThing.p₂_not_principal
+#print axioms ExistenceSystem.TheThing.p₂_order
+#print axioms ExistenceSystem.TheThing.eq_p₂_of_absNorm_eq_two
+#print axioms ExistenceSystem.TheThing.class_eq_one_or_p₂
+#print axioms ExistenceSystem.TheThing.classGroup_card_eq_two
+#print axioms ExistenceSystem.TheThing.classNumber_eq_two
+#print axioms ExistenceSystem.TheThing.classGroup_isCyclic
+#print axioms ExistenceSystem.TheThing.not_principalIdealRing
+#print axioms ExistenceSystem.TheThing.p₃_class_eq_p₂
+#print axioms ExistenceSystem.TheThing.p₃'_class_eq_p₂
+#print axioms ExistenceSystem.TheThing.χ_neg20_level
+#print axioms ExistenceSystem.TheThing.χ_neg20_eq_mul
+#print axioms ExistenceSystem.TheThing.three_char_eq_one
+#print axioms ExistenceSystem.TheThing.legendre_five_neg_one
+#print axioms ExistenceSystem.TheThing.χ_neg20_split
+#print axioms ExistenceSystem.TheThing.split_of_norm_two_p
+#print axioms ExistenceSystem.TheThing.seven_home
+#print axioms ExistenceSystem.TheThing.sixtySeven_home
+#print axioms ExistenceSystem.TheThing.oneHundredSeven_home

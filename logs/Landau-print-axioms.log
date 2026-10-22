@@ -1,0 +1,10 @@
+'ExistenceSystem.Landau.cc_eq_two_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Landau.shellQuad_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Landau.shellQuartic_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Landau.t1_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Landau.t2_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Landau.sum_evalTerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Landau.sectorJ_div_vol' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Landau.slave_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Landau.uniform_slave' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0

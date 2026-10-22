@@ -1,0 +1,6 @@
+'ExistenceSystem.IcosahedralRep.classSize_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.IcosahedralRep.star_chi3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.IcosahedralRep.embedPsi_chi3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.IcosahedralRep.charInner_chi3_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.IcosahedralRep.charInner_chi3_cross' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0

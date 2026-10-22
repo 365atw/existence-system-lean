@@ -1,0 +1,3 @@
+'ExistenceSystem.KL14.fixedPoint_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL14.ascent_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0
