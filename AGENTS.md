@@ -4,6 +4,7 @@ This file is the project's committed home for project-intrinsic agent knowledge:
 
 - Build with `lake build`. Audit axioms with `lake env lean checks/PrintAxioms.lean`. The bar is only `propext`, `Classical.choice`, and `Quot.sound`. Output is in `logs/lake-build.log` and `logs/print-axioms.log`.
 - What each statement encodes, and what is left as prose, is in `README.md` and the module headers under `ExistenceSystem/`. `KL13.residual` is the coil sequence for KL13 and KL14; `KL18.residual` stays the merged copy (see the KL13 header).
+- Layer-0 shared modules are `Quadratic`, `Lucas`, `Icosahedral`, `IcosahedralRep`, `Landau`, and `EulerLagrange`. KL18 imports Lucas; KL27 imports Quadratic. Do not give the coil faces a second home inside ℚ(√5).
 
 ## Maintaining this file
 
