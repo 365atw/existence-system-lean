@@ -15,8 +15,8 @@ Reading choices (quoting the Lean map `data/lean-scope-b/G6.md`, KL18 points 2 a
   (Note B.5, L1263: "the coil-`k` face is `φ^{±3k}`"; the identity is stated in the index `n`,
   the coil form is the case `n = 3k`).
 * The Lucas identity `φⁿ + σ(φ)ⁿ = Lₙ` (Note L1061, B.5 L1261) needs Lucas numbers, which the map
-  records Mathlib lacks ("B-LF: Lucas numbers NOT FOUND"); the minimal definition `lucas` is added
-  below with her line reference.
+  records Mathlib lacks ("B-LF: Lucas numbers NOT FOUND"). The definition lives in
+  `ExistenceSystem.Lucas` and is abbreviated here, so the coil file keeps the name `lucas`.
 * "The norm of the pair is exactly 1 at every coil" (L1064) has two formal readings the map names
   (`|N| = 1` or `N = (-1)ᵏ`); her ledger (2026-08-20, "THE SIGNED NORM") and Note B.6 L1267
   (`product = (-1)^k`) take `N = (-1)ᵏ`. Both are proved below (`norm_pair`, `norm_pair_abs`).
@@ -29,6 +29,7 @@ that is encoded. "None is arrived at" is `residual_pos` (KL13). The limit `r = 0
 KL12's *configuration* type are not encoded (map, KL12 point 5).
 -/
 public import Mathlib
+public import ExistenceSystem.Lucas
 
 @[expose] public section
 
@@ -40,12 +41,10 @@ namespace ExistenceSystem.KL18
 /-! ## 0. Lucas numbers
 
 Note L1061/L1261 names "the Lucas numbers [Lucas 1878]"; reference [68] (L1407): "The identity
-`φⁿ + σ(φ)ⁿ = Lₙ`". The map (G6, "B-LF") records Lucas numbers are not in Mathlib; this is the
-minimal definition, `L₀ = 2`, `L₁ = 1`, `Lₙ₊₂ = Lₙ₊₁ + Lₙ`. -/
-def lucas : ℕ → ℤ
-  | 0 => 2
-  | 1 => 1
-  | (n + 2) => lucas (n + 1) + lucas n
+`φⁿ + σ(φ)ⁿ = Lₙ`". The map (G6, "B-LF") records Lucas numbers are not in Mathlib. The definition
+is `ExistenceSystem.Lucas.lucas` (`L₀ = 2`, `L₁ = 1`, `Lₙ₊₂ = Lₙ₊₁ + Lₙ`); the names below are
+that definition, so the coil statements stay in this file. -/
+abbrev lucas : ℕ → ℤ := Lucas.lucas
 
 @[simp] theorem lucas_zero : lucas 0 = 2 := rfl
 @[simp] theorem lucas_one : lucas 1 = 1 := rfl
@@ -62,20 +61,8 @@ theorem goldenConj_eq_one_sub : ψ = 1 - φ := (one_sub_goldenConj).symm
 
 /-- Note L1061 / B.5 L1261: `φⁿ + σ(φ)ⁿ = Lₙ` for every `n`. -/
 theorem goldenRatio_pow_add_goldenConj_pow (n : ℕ) :
-    φ ^ n + ψ ^ n = (lucas n : ℝ) := by
-  induction n using Nat.twoStepInduction with
-  | zero => norm_num
-  | one => norm_num
-  | more n ih1 ih2 =>
-    have eφ : φ ^ (n + 2) = φ ^ (n + 1) + φ ^ n := by
-      have h : φ ^ (n + 2) = φ ^ n * φ ^ 2 := by ring
-      rw [h, goldenRatio_sq]; ring
-    have eψ : ψ ^ (n + 2) = ψ ^ (n + 1) + ψ ^ n := by
-      have h : ψ ^ (n + 2) = ψ ^ n * ψ ^ 2 := by ring
-      rw [h, goldenConj_sq]; ring
-    have hl : (lucas (n + 2) : ℝ) = (lucas (n + 1) : ℝ) + (lucas n : ℝ) := by
-      rw [lucas_add_two]; push_cast; ring
-    rw [eφ, eψ, hl, ← ih1, ← ih2]; ring
+    φ ^ n + ψ ^ n = (lucas n : ℝ) :=
+  Lucas.goldenRatio_pow_add_goldenConj_pow n
 
 /-! ## 2. The Pisot mechanism
 

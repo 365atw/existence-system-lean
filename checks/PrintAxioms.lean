@@ -65,6 +65,79 @@ open ExistenceSystem.KL27
 #print axioms antifixed_iff_trace_zero
 #print axioms eigenvalue_eq_one_or_neg_one
 
+#print axioms ExistenceSystem.Lucas.lucas
+#print axioms ExistenceSystem.Lucas.lucas_zero
+#print axioms ExistenceSystem.Lucas.lucas_one
+#print axioms ExistenceSystem.Lucas.lucas_add_two
+#print axioms ExistenceSystem.Lucas.goldenRatio_pow_add_goldenConj_pow
+
+#print axioms ExistenceSystem.Quadratic.no_rational_root
+#print axioms ExistenceSystem.Quadratic.sigma_involutive
+#print axioms ExistenceSystem.Quadratic.fold_eq_trace
+#print axioms ExistenceSystem.Quadratic.trace_def'
+#print axioms ExistenceSystem.Quadratic.norm_def'
+#print axioms ExistenceSystem.Quadratic.coeZphi_star
+#print axioms ExistenceSystem.Quadratic.omega_sq_zphi
+#print axioms ExistenceSystem.Quadratic.embedPhi_mk
+#print axioms ExistenceSystem.Quadratic.embedPsi_mk
+#print axioms ExistenceSystem.Quadratic.embedPhi_omega
+#print axioms ExistenceSystem.Quadratic.embedPsi_omega
+#print axioms ExistenceSystem.Quadratic.embedPsi_eq_embedPhi_star
+#print axioms ExistenceSystem.Quadratic.embedPhi_coeZphi
+#print axioms ExistenceSystem.Quadratic.embedPsi_coeZphi
+#print axioms ExistenceSystem.Quadratic.embedPhi_injective
+
+#print axioms ExistenceSystem.Icosahedral.qDot_eq
+#print axioms ExistenceSystem.Icosahedral.qDot_self
+#print axioms ExistenceSystem.Icosahedral.qDot_off
+#print axioms ExistenceSystem.Icosahedral.sign_ne_zero_off
+#print axioms ExistenceSystem.Icosahedral.qVec_dot
+#print axioms ExistenceSystem.Icosahedral.qVecPerp_dot
+#print axioms ExistenceSystem.Icosahedral.qVec_norm_sq
+#print axioms ExistenceSystem.Icosahedral.qVecPerp_norm_sq
+#print axioms ExistenceSystem.Icosahedral.two_add_phi_eq_sqrt5_mul_phi
+#print axioms ExistenceSystem.Icosahedral.phi_div_norm_sq
+#print axioms ExistenceSystem.Icosahedral.psi_div_conj_norm_sq
+#print axioms ExistenceSystem.Icosahedral.length_ratio
+#print axioms ExistenceSystem.Icosahedral.three_sub_phi_eq
+#print axioms ExistenceSystem.Icosahedral.Q_dot_self
+#print axioms ExistenceSystem.Icosahedral.Q_dot_off
+#print axioms ExistenceSystem.Icosahedral.Qperp_dot_self
+#print axioms ExistenceSystem.Icosahedral.Qperp_dot_off
+#print axioms ExistenceSystem.Icosahedral.row_dot
+#print axioms ExistenceSystem.Icosahedral.row_orthonormal
+#print axioms ExistenceSystem.Icosahedral.A_mul_transpose
+#print axioms ExistenceSystem.Icosahedral.A_transpose_mul
+#print axioms ExistenceSystem.Icosahedral.mem_lattice_rows
+#print axioms ExistenceSystem.Icosahedral.rawM_eq_images
+#print axioms ExistenceSystem.Icosahedral.det_rawM
+#print axioms ExistenceSystem.Icosahedral.det_rawM_ne_zero
+#print axioms ExistenceSystem.Icosahedral.piJoin_bijective
+
+#print axioms ExistenceSystem.IcosahedralRep.classSize_sum
+#print axioms ExistenceSystem.IcosahedralRep.star_chi3
+#print axioms ExistenceSystem.IcosahedralRep.embedPsi_chi3
+#print axioms ExistenceSystem.IcosahedralRep.charInner_chi3_self
+#print axioms ExistenceSystem.IcosahedralRep.charInner_chi3_cross
+
+#print axioms ExistenceSystem.Landau.cc_eq_two_re
+#print axioms ExistenceSystem.Landau.shellQuad_uniform
+#print axioms ExistenceSystem.Landau.shellQuartic_uniform
+#print axioms ExistenceSystem.Landau.t1_saturated
+#print axioms ExistenceSystem.Landau.t2_saturated
+#print axioms ExistenceSystem.Landau.sum_evalTerm
+#print axioms ExistenceSystem.Landau.sectorJ_div_vol
+#print axioms ExistenceSystem.Landau.slave_exact
+#print axioms ExistenceSystem.Landau.uniform_slave
+
+#print axioms ExistenceSystem.EulerLagrange.el_gradientOnly
+#print axioms ExistenceSystem.EulerLagrange.variation_at_zero
+#print axioms ExistenceSystem.EulerLagrange.hasDerivAt_setEntry
+#print axioms ExistenceSystem.EulerLagrange.hasDerivAt_gradDensity
+#print axioms ExistenceSystem.EulerLagrange.ibp_line
+#print axioms ExistenceSystem.EulerLagrange.ibp_frechet
+#print axioms ExistenceSystem.EulerLagrange.ibp_sum_directions
+
 open ExistenceSystem.TheThing
 #print axioms int_coord_unique
 #print axioms discr_eq_neg_twenty

@@ -31,6 +31,7 @@ Reading choices (quoting the Lean map `data/lean-scope-b/G6.md`, KL27 points 2 a
 "Rests on KL15 and KL18" is carried as stated (map, KL27 point 3: "the eigenspace and fold/difference
 identities use nothing from KL15 or KL18 beyond the shared objects").
 -/
+public import ExistenceSystem.Quadratic
 public import ExistenceSystem.KL18
 
 @[expose] public section
@@ -62,26 +63,13 @@ theorem diff_eq_sqrt5_fib (k : ℕ) :
 Her field `ℚ(√5)` is `QuadraticAlgebra ℚ 1 1` (the algebra `ω² = 1 + ω`, so `ω = φ`); `σ = star`
 (`star ω = 1 - ω = σ(φ)`); the trace form is `(x, y) ↦ trace (x·y)` (map, "B-Q5"/"B-TR"). -/
 
-/-- Her field `ℚ(√5)`, carried by `QuadraticAlgebra ℚ 1 1`. -/
-abbrev K := QuadraticAlgebra ℚ 1 1
+/-- Her field `ℚ(√5)`, carried by `QuadraticAlgebra ℚ 1 1`. One `Fact` instance, in
+`ExistenceSystem.Quadratic`, makes this a field. -/
+abbrev K := Quadratic.K
 
-/-- There is no rational `r` with `r² = 1 + r` (the roots of `x²-x-1` are `φ, ψ`, both irrational). This is
-exactly the hypothesis under which `QuadraticAlgebra ℚ 1 1` is a field (Mathlib's `Field` instance). -/
-theorem no_rational_root : ∀ r : ℚ, r ^ 2 ≠ 1 + 1 * r := by
-  intro r hr
-  have hr' : (r : ℝ) ^ 2 = (r : ℝ) + 1 := by
-    have : (r : ℝ) ^ 2 = 1 + 1 * (r : ℝ) := by exact_mod_cast hr
-    linarith
-  have hfac : ((r : ℝ) - φ) * ((r : ℝ) - ψ) = 0 := by
-    have h1 : φ + ψ = 1 := goldenRatio_add_goldenConj
-    have h2 : φ * ψ = -1 := goldenRatio_mul_goldenConj
-    linear_combination hr' - (r : ℝ) * h1 + h2
-  rcases mul_eq_zero.1 hfac with h | h
-  · exact goldenRatio_irrational ⟨r, by linarith⟩
-  · exact goldenConj_irrational ⟨r, by linarith⟩
-
-/-- The `Fact` activating Mathlib's `Field (QuadraticAlgebra ℚ 1 1)` instance, so `K` is her field. -/
-instance factNoRoot : Fact (∀ r : ℚ, r ^ 2 ≠ 1 + 1 * r) := ⟨no_rational_root⟩
+/-- There is no rational `r` with `r² = 1 + r`. Proved in `ExistenceSystem.Quadratic`. -/
+theorem no_rational_root : ∀ r : ℚ, r ^ 2 ≠ 1 + 1 * r :=
+  Quadratic.no_rational_root
 
 /-- Note L138: `σ` "of order two". `σ² = id`. -/
 theorem sigma_involutive (x : K) : star (star x) = x := star_star x

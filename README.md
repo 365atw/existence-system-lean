@@ -93,8 +93,8 @@ when subtracted" (L138):
 "`σ` is self-adjoint for the trace form and of order two, so it is an orthogonal reflection … eigenvalues `+1`
 and `-1` and nothing else" (L138):
 
-- `no_rational_root` / `factNoRoot`: `r² ≠ 1 + r` for every rational `r`, so `QuadraticAlgebra ℚ 1 1` is a
-  field (her `ℚ(√5)`)
+- `no_rational_root`: `r² ≠ 1 + r` for every rational `r`. The `Fact` that makes `QuadraticAlgebra ℚ 1 1`
+  a field lives in `ExistenceSystem.Quadratic`; this theorem is that statement (her `ℚ(√5)`)
 - `sigma_involutive` (`σ² = id`, order two), `traceForm_self_adjoint` (`Tr(σ(x)·y) = Tr(x·σ(y))`)
 - `fold_fixed`, `fold_eq_algebraMap_trace`: the `+1` side is the fold `x + σ(x)`, which is the trace — a scalar
 - `diff_antifixed`, `diff_trace_zero`: the `-1` side is `x - σ(x)`, on the trace-zero line (where §7.3 confines `δ`)
@@ -111,6 +111,32 @@ eigenvalues of one reflection"; the words *exogenous* and *freedom* "have no Lea
 encoded, nor is the choice between the two readings of "`δ` reads `√5·F_{3k}`". "Rests on KL15 and KL18" is
 carried as stated (the eigenspace and fold/difference identities use nothing from them beyond the shared
 objects).
+
+## Layer 0 — shared modules
+
+Infrastructure the later statements share. Each module is one definition. KL18 imports `Lucas`; KL27
+imports `Quadratic`. The coil faces stay over ℝ. Nothing here proves `trace(ωⁿ) = Lₙ`.
+
+- `Lucas` (`ExistenceSystem/Lucas.lean`): `L₀ = 2`, `L₁ = 1`, `Lₙ₊₂ = Lₙ₊₁ + Lₙ`, and
+  `φⁿ + ψⁿ = Lₙ` (Note L1061). KL18's `lucas` is this definition.
+- `Quadratic` (`ExistenceSystem/Quadratic.lean`): ℤ[φ] and ℚ(√5), `σ = star`, trace, norm, and the two
+  real embeddings `embedPhi`, `embedPsi` (`QuadraticAlgebra.lift` at φ and at ψ). Note L214.
+- `Icosahedral` (`ExistenceSystem/Icosahedral.lean`): the six vectors, the normalised star, `Qᵢ^⊥`,
+  the rows `Gᵢ`, `AAᵀ = I`, the lattice `ℒ = A(ℤ⁶)`, and `det = 40√5` (Note L482–L508).
+- `IcosahedralRep` (`ExistenceSystem/IcosahedralRep.lean`): the five class sizes and the character values
+  of `Γ₃` and `Γ₃'` on ℚ(√5), with `σ` swapping them and the inner products `1` and `0` (Note L510–L514).
+  No matrices and no action on ℤ⁶.
+- `Landau` (`ExistenceSystem/Landau.lean`): the uniform-sector density, one term of `J` as one summand of
+  that density (Note L615), both cubic displays (L602 and L619, not proved equal), and the slaving
+  identity with the `O(η⁶)` remainder kept (Note L625–L627).
+- `EulerLagrange` (`ExistenceSystem/EulerLagrange.lean`): the first-order operator, the chain rule of the
+  first variation, and `Π` at quadratic order (Note L829–L836). `T_kmpq = T_pqkm` is a hypothesis.
+  Landau does not import this module.
+
+Omitted, because the Note does not define them: a concrete `Y ≅ A₅` isomorphism and a ℤ⁶ action; the
+entries of `T` and `M` and the domain `Ω`; a general carrier for "every term of `J`"; the higher-order
+admissible class; the bridge `trace(ωⁿ) = Lₙ`; an equality between the factor-2 cubic at L602 and the
+cosine at L619.
 
 Build: `lake exe cache get && lake build` (Lean `v4.35.0-rc4`, Mathlib `v4.35.0-rc4`).
 Axiom check: `lake env lean checks/PrintAxioms.lean` (standalone script, not part of the build target); every

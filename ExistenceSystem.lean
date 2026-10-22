@@ -1,5 +1,11 @@
 module
 
+public import ExistenceSystem.Lucas
+public import ExistenceSystem.Quadratic
+public import ExistenceSystem.Icosahedral
+public import ExistenceSystem.IcosahedralRep
+public import ExistenceSystem.Landau
+public import ExistenceSystem.EulerLagrange
 public import ExistenceSystem.KL1
 public import ExistenceSystem.KL3
 public import ExistenceSystem.KL13
