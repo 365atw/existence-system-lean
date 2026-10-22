@@ -17,6 +17,19 @@ Proved with no `sorry`, `admit`, or new axioms:
 Her words are quoted beside each statement with line numbers from the Note.
 Only that mathematics is formalised; the prose on Note L86 after the mathematical sentence, and the picture in §1.2, are not encoded.
 
+## KL2 — the obstruction (`ExistenceSystem/KL2.lean`, §2.1)
+
+§2.1: an exact algebraic characterisation of φ is a construction in which φ is an exact root.
+In her field `ℚ(√5) = ExistenceSystem.Quadratic.K` (`QuadraticAlgebra ℚ 1 1`, the carrier KL27 uses),
+that root is the generator `ω`.
+Proved with no `sorry`, `admit`, or new axioms:
+
+- `minpoly_omega`, `minpoly_phi`: `minpoly ℚ ω = minpoly ℚ φ = X² - X - 1` (Note l.358; irreducible by inspection at `n = 2`, via `Quadratic.no_rational_root`)
+- `carries_minpoly`: a polynomial over `ℚ` with `ω` as an exact root is divisible by `X² - X - 1`
+- `agree`: any two such characterisations agree at φ (Note l.360)
+
+Free selection is not encoded. This file closes the two-exact-functionals question only.
+
 ## KL3 — the indifference theorem (`ExistenceSystem/KL3.lean`)
 
 For `V(x) = -(r/2)x² + ¼x⁴` with `r > 0`, proved with no `sorry`, `admit`, or new axioms:
