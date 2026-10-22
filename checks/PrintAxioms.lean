@@ -11,6 +11,12 @@ open ExistenceSystem.KL1
 #print axioms rho_cube
 #print axioms rho_unique
 
+open ExistenceSystem.KL2
+#print axioms minpoly_omega
+#print axioms minpoly_phi
+#print axioms carries_minpoly
+#print axioms agree
+
 open ExistenceSystem.KL3
 #print axioms V_branches
 #print axioms V_even
