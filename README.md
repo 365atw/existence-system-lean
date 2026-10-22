@@ -29,6 +29,29 @@ For `V(x) = -(r/2)x² + ¼x⁴` with `r > 0`, proved with no `sorry`, `admit`, o
 Her words are quoted beside each statement with line numbers from the Note.
 Only the mathematics of the potential is formalised; the prose concepts ("least-action drive", "provably indifferent", "exogenous", the cusp step of §3.3) are not encoded.
 
+## KL13 — positivity of the residual (`ExistenceSystem/KL13.lean`)
+
+The coil law `r_{k+1} = φ^{-3} r_k` is taken as given. For `r₀ > 0` and `φ^{-3} > 0`,
+`residual_pos`: `r_k > 0` for every finite `k`. Her list-form clause "no configuration is bound at
+any finite coil" names KL12's *configuration*, whose type the Note does not give; that type is not
+encoded.
+
+## KL14 — fixed point of the coil map (`ExistenceSystem/KL14.lean`)
+
+On `[0, r₀]` with `0 ≤ r₀`, by Banach (`ContractingWith` with constant `φ^{-3}`):
+
+- `fixedPoint_eq_zero`: `0` is the unique fixed point of `r ↦ φ^{-3} r`
+- `ascent_tendsto_zero`: the residual sequence (the ascent) converges to `0`
+
+Her clause "the bound configuration exists, is unique, and is the limit of the ascent" uses that
+same undefined *configuration* type; only the fixed point and the limit are encoded.
+
+## KL15 — the trace identity (`ExistenceSystem/KL15.lean`)
+
+`piSwap_eq_m`: the §7.3 trace reading `π_swap(m·φ) = A' + B' = m` for every `δ`. The identity does
+not depend on the coil. The "only determinate reading" past the trace, the units criterion, the
+word *total*, and `E = mc²` are not encoded.
+
 ## KL18 — THE CONJUGATE LANDING THEOREM (`ExistenceSystem/KL18.lean`)
 
 Her title (Note L120). Formalised over ℝ with Mathlib's `Real.goldenRatio` (`φ`) and `Real.goldenConj`

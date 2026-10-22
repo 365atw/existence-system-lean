@@ -23,6 +23,13 @@ open ExistenceSystem.KL3
 #print axioms minimizers_ncard
 #print axioms flow_eq_neg_deriv
 
+#print axioms ExistenceSystem.KL13.residual_pos
+
+#print axioms ExistenceSystem.KL14.fixedPoint_eq_zero
+#print axioms ExistenceSystem.KL14.ascent_tendsto_zero
+
+#print axioms ExistenceSystem.KL15.piSwap_eq_m
+
 open ExistenceSystem.KL18
 #print axioms lucas
 #print axioms goldenRatio_pow_add_goldenConj_pow
