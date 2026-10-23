@@ -76,6 +76,18 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL27.antifixed_iff_trace_zero
 #print axioms ExistenceSystem.KL27.eigenvalue_eq_one_or_neg_one
 
+#print axioms ExistenceSystem.KL23.fsIndicator_chi3
+#print axioms ExistenceSystem.KL23.fsIndicator_chi3'
+#print axioms ExistenceSystem.KL23.dim_perp_not_complex_type
+#print axioms ExistenceSystem.KL23.dim_perp_not_quaternionic_type
+#print axioms ExistenceSystem.KL23.inequivalent
+#print axioms ExistenceSystem.KL23.chi_ne_on_c5
+#print axioms ExistenceSystem.KL23.irreducible_chi3
+#print axioms ExistenceSystem.KL23.mixed_block_vanishes
+#print axioms ExistenceSystem.KL23.perp_block_scalar
+#print axioms ExistenceSystem.KL23.par_block_scalar
+#print axioms ExistenceSystem.KL23.two_rate
+
 #print axioms ExistenceSystem.Lucas.lucas
 #print axioms ExistenceSystem.Lucas.lucas_zero
 #print axioms ExistenceSystem.Lucas.lucas_one
