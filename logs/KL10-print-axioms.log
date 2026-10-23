@@ -1,0 +1,5 @@
+'ExistenceSystem.KL10.inner_gradient_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL10.hasDerivAt_coord' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL10.conserved_coord' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL10.conserved_along_neg_gradient' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0

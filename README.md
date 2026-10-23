@@ -42,6 +42,16 @@ For `V(x) = -(r/2)x² + ¼x⁴` with `r > 0`, proved with no `sorry`, `admit`, o
 Her words are quoted beside each statement with line numbers from the Note.
 Only the mathematics of the potential is formalised; the prose concepts ("least-action drive", "provably indifferent", "exogenous", the cusp step of §3.3) are not encoded.
 
+## KL10 — Lemma 4, the conservation statement (`ExistenceSystem/KL10.lean`)
+
+Note L104: "Every continuous symmetry of a potential is an exactly conserved quantity of the gradient flow that potential generates." The statement is known (A14/A18 — Kunin et al. — reached independently); what is new is its use, not the statement. Proved with no `sorry`, `admit`, or new axioms:
+
+- `inner_gradient_eq_zero`: invariance under `x ↦ x + s v` gives `v · ∇J ≡ 0` (Note L909)
+- `hasDerivAt_coord`, `conserved_coord`: if `Γ` is constant and symmetric and `Γ v = Γᵥ v`, then along any solution of `ẋ = −Γ ∇J` the coordinate `v · x` has derivative `0` and is constant
+- `conserved_along_neg_gradient`: the gradient flow `ẋ = −∇J` (`Γ = id`)
+
+Her `C¹` is `ContDiff ℝ 1`, on a complete real inner-product space. The formal statement is the body's one-parameter translation (Note L909). The list form's "every continuous symmetry", read as a general group action, is not encoded: the Note defines no such action, and A19 marks that case as a different object. The flow is a hypothesis on a curve; existence of solutions is not claimed. The prose after L911 is not encoded.
+
 ## KL13 — positivity of the residual (`ExistenceSystem/KL13.lean`)
 
 The coil law `r_{k+1} = φ^{-3} r_k` is taken as given. For `r₀ > 0` and `φ^{-3} > 0`,

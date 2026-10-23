@@ -193,3 +193,8 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.TheThing.seven_home
 #print axioms ExistenceSystem.TheThing.sixtySeven_home
 #print axioms ExistenceSystem.TheThing.oneHundredSeven_home
+
+#print axioms ExistenceSystem.KL10.inner_gradient_eq_zero
+#print axioms ExistenceSystem.KL10.hasDerivAt_coord
+#print axioms ExistenceSystem.KL10.conserved_coord
+#print axioms ExistenceSystem.KL10.conserved_along_neg_gradient
