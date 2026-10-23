@@ -152,9 +152,9 @@ admissible class; the bridge `trace(ωⁿ) = Lₙ`; an equality between the fact
 cosine at L619.
 
 Build: `lake exe cache get && lake build` (Lean `v4.35.0-rc4`, Mathlib `v4.35.0-rc4`).
-Axiom check: `lake env lean checks/PrintAxioms.lean` (standalone script, not part of the build target); every
-audited theorem depends only on `propext`, `Classical.choice`, `Quot.sound` (the Lucas definition depends on
-no axioms). Logs in `logs/`.
+Axiom check: `checks/item-logs.sh` (runs `lake env lean checks/PrintAxioms.lean`, standalone, not part of the build target); every
+audited theorem depends only on `propext`, `Classical.choice`, and `Quot.sound` (the Lucas definition depends on
+no axioms). Per-item logs: `logs/README`.
 
 ## TheThing — the arithmetic of `ℚ(√−5)` (`ExistenceSystem/TheThing.lean`)
 

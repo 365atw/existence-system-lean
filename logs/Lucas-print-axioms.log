@@ -1,0 +1,6 @@
+'ExistenceSystem.Lucas.lucas' does not depend on any axioms
+'ExistenceSystem.Lucas.lucas_zero' does not depend on any axioms
+'ExistenceSystem.Lucas.lucas_one' does not depend on any axioms
+'ExistenceSystem.Lucas.lucas_add_two' does not depend on any axioms
+'ExistenceSystem.Lucas.goldenRatio_pow_add_goldenConj_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0

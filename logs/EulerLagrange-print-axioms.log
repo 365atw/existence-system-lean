@@ -1,0 +1,8 @@
+'ExistenceSystem.EulerLagrange.el_gradientOnly' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.EulerLagrange.variation_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.EulerLagrange.hasDerivAt_setEntry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.EulerLagrange.hasDerivAt_gradDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.EulerLagrange.ibp_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.EulerLagrange.ibp_frechet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.EulerLagrange.ibp_sum_directions' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0

@@ -1,0 +1,18 @@
+'ExistenceSystem.KL18.lucas' does not depend on any axioms
+'ExistenceSystem.KL18.goldenRatio_pow_add_goldenConj_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.goldenConj_eq_one_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.conj_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.conj_abs_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.goldenConj_pow_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.fold_coil' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.fold_coil_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.goldenRatio_pow_succ_irrational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.goldenConj_pow_succ_irrational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.face_par_irrational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.face_perp_irrational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.norm_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.norm_pair_abs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.residual_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.residual_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL18.piswap_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0

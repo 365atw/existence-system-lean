@@ -1,0 +1,17 @@
+Per-item logs
+
+Each item writes only its own files:
+
+- logs/<Item>-build.log — `Build completed successfully ...` for the package build that recorded that item, then exit=
+- logs/<Item>-print-axioms.log — `#print axioms` lines for that item, then exit=
+
+The item name is the module after `ExistenceSystem` in the declaration name.
+
+Do not append to a shared logs/lake-build.log or logs/print-axioms.log.
+A branch records one item, and does not rewrite the others:
+
+    checks/item-logs.sh KL13
+
+With no argument, checks/item-logs.sh records every item in checks/PrintAxioms.lean.
+Append a fully qualified `#print axioms ExistenceSystem.<Item>.<decl>` line there.
+The axiom bar is propext, Classical.choice, and Quot.sound.
