@@ -36,6 +36,16 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL3.minimizers_ncard
 #print axioms ExistenceSystem.KL3.flow_eq_neg_deriv
 
+#print axioms ExistenceSystem.KL5.starVec_dot
+#print axioms ExistenceSystem.KL5.starVec_dot_self
+#print axioms ExistenceSystem.KL5.starVec_dot_ne_neg_half
+#print axioms ExistenceSystem.KL5.no_closed_triad
+#print axioms ExistenceSystem.KL5.secondShell_sq_add
+#print axioms ExistenceSystem.KL5.secondShell_sq_sub
+#print axioms ExistenceSystem.KL5.secondShell_ratio_sq
+#print axioms ExistenceSystem.KL5.shell_ratio
+#print axioms ExistenceSystem.KL5.mixed_triad_long_not_unit
+
 #print axioms ExistenceSystem.KL13.residual_pos
 
 #print axioms ExistenceSystem.KL14.fixedPoint_eq_zero
