@@ -193,3 +193,17 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.TheThing.seven_home
 #print axioms ExistenceSystem.TheThing.sixtySeven_home
 #print axioms ExistenceSystem.TheThing.oneHundredSeven_home
+
+#print axioms ExistenceSystem.Summit.χ_neg20_eq_legendre_negFive
+#print axioms ExistenceSystem.Summit.χ_neg20ℂ_odd
+#print axioms ExistenceSystem.Summit.two_ramifies
+#print axioms ExistenceSystem.Summit.five_ramifies
+#print axioms ExistenceSystem.Summit.splitting_of_χ
+#print axioms ExistenceSystem.Summit.zetaProduct_trivialZero
+#print axioms ExistenceSystem.Summit.zetaProduct_ne_zero_of_one_le_re
+#print axioms ExistenceSystem.Summit.rh_one_piece
+#print axioms ExistenceSystem.Summit.alphaForced
+#print axioms ExistenceSystem.Summit.noTerminatingOmega
+#print axioms ExistenceSystem.Summit.hasDerivAt_re_criticalPoint
+#print axioms ExistenceSystem.Summit.hasDerivAt_criticalTrajectory
+#print axioms ExistenceSystem.Summit.criticalTangent_eq
