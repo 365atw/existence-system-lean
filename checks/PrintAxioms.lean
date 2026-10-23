@@ -95,6 +95,12 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL20.perp_inter_lattice_eq_zero
 #print axioms ExistenceSystem.KL20.parProj_injOn_lattice
 
+#print axioms ExistenceSystem.KL22.piParallel_sum
+#print axioms ExistenceSystem.KL22.monoPhase_eq
+#print axioms ExistenceSystem.KL22.phase_trivial_iff
+#print axioms ExistenceSystem.KL22.piParallel_zero_iff_closure
+#print axioms ExistenceSystem.KL22.admissible_iff_closure
+
 #print axioms ExistenceSystem.KL27.fold_eq_lucas
 #print axioms ExistenceSystem.KL27.diff_eq_sqrt5_fib
 #print axioms ExistenceSystem.KL27.no_rational_root
