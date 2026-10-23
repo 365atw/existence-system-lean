@@ -1,4 +1,6 @@
-# existence-system-lean
+# The One Piece
+
+ℚ(√−5)
 
 Lean 4 + Mathlib formalisation of results from THE EXACT AND FREE SYSTEM — AN EXISTENCE SYNTHESIS.
 
@@ -166,7 +168,11 @@ Axiom check: `checks/item-logs.sh` (runs `lake env lean checks/PrintAxioms.lean`
 audited theorem depends only on `propext`, `Classical.choice`, and `Quot.sound` (the Lucas definition depends on
 no axioms). Per-item logs: `logs/README`.
 
-## TheThing — the arithmetic of `ℚ(√−5)` (`ExistenceSystem/TheThing.lean`)
+## The One Piece
+
+ℚ(√−5)
+
+`ExistenceSystem/TheThing.lean`
 
 Report `qsqrt5-rep-s1`: "ℚ(√−5) is the imaginary quadratic field of discriminant −20.
 Its ring of integers is ℤ[√−5], with unit group {±1}. The ideal class group is cyclic of

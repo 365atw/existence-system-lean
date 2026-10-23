@@ -1,7 +1,9 @@
 module
 
 /-
-THE THING — the arithmetic of `K = ℚ(√−5)`.
+The One Piece
+
+`K = ℚ(√−5)`.
 
 Report `qsqrt5-rep-s1`: "ℚ(√−5) is the imaginary quadratic field of discriminant −20.
 Its ring of integers is ℤ[√−5], with unit group {±1}. The ideal class group is cyclic of
@@ -48,7 +50,9 @@ open Polynomial NumberField InfinitePlace Ideal Nat Module
 
 namespace ExistenceSystem.TheThing
 
-/-! ## The field `K = ℚ(δ)`, `δ² = −5` -/
+/-! ## The One Piece
+
+`K = ℚ(√−5)`, `δ² = −5`. -/
 
 /-- The polynomial `X² + 5`. Report §1: the defining polynomial of `ℚ(√−5)`. -/
 def poly : ℚ[X] := X ^ 2 + C 5
