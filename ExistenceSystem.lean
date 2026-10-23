@@ -28,3 +28,4 @@ public import ExistenceSystem.SummitHalfPlane
 public import ExistenceSystem.SummitStrip
 public import ExistenceSystem.KL19
 public import ExistenceSystem.KL21
+public import ExistenceSystem.KL24
