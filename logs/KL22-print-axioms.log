@@ -1,0 +1,6 @@
+'ExistenceSystem.KL22.piParallel_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL22.monoPhase_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL22.phase_trivial_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL22.piParallel_zero_iff_closure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL22.admissible_iff_closure' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0

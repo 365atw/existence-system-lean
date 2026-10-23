@@ -1,0 +1,6 @@
+'ExistenceSystem.KL12.free' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL12.bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL12.free_iff_not_bound_of_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL12.residual_free' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL12.not_bound_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0

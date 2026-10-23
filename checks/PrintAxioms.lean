@@ -36,7 +36,29 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL3.minimizers_ncard
 #print axioms ExistenceSystem.KL3.flow_eq_neg_deriv
 
+#print axioms ExistenceSystem.KL12.free
+#print axioms ExistenceSystem.KL12.bound
+#print axioms ExistenceSystem.KL12.free_iff_not_bound_of_nonneg
+#print axioms ExistenceSystem.KL12.residual_free
+#print axioms ExistenceSystem.KL12.not_bound_residual
+#print axioms ExistenceSystem.KL5.starVec_dot
+#print axioms ExistenceSystem.KL5.starVec_dot_self
+#print axioms ExistenceSystem.KL5.starVec_dot_ne_neg_half
+#print axioms ExistenceSystem.KL5.no_closed_triad
+#print axioms ExistenceSystem.KL5.secondShell_sq_add
+#print axioms ExistenceSystem.KL5.secondShell_sq_sub
+#print axioms ExistenceSystem.KL5.secondShell_ratio_sq
+#print axioms ExistenceSystem.KL5.shell_ratio
+#print axioms ExistenceSystem.KL5.mixed_triad_long_not_unit
+
 #print axioms ExistenceSystem.KL13.residual_pos
+
+#print axioms ExistenceSystem.KL16.sigmaIdeal_prime_pow
+#print axioms ExistenceSystem.KL16.sigmaIdeal_mul_coprime
+#print axioms ExistenceSystem.KL16.four_perfect_ideals
+#print axioms ExistenceSystem.KL16.sigma_orbits
+#print axioms ExistenceSystem.KL16.classical_perfect_numbers_do_not_lift
+#print axioms ExistenceSystem.KL16.KL16_four_perfect_ideals
 
 #print axioms ExistenceSystem.KL14.fixedPoint_eq_zero
 #print axioms ExistenceSystem.KL14.ascent_tendsto_zero
@@ -72,6 +94,12 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL20.parProj_lattice
 #print axioms ExistenceSystem.KL20.perp_inter_lattice_eq_zero
 #print axioms ExistenceSystem.KL20.parProj_injOn_lattice
+
+#print axioms ExistenceSystem.KL22.piParallel_sum
+#print axioms ExistenceSystem.KL22.monoPhase_eq
+#print axioms ExistenceSystem.KL22.phase_trivial_iff
+#print axioms ExistenceSystem.KL22.piParallel_zero_iff_closure
+#print axioms ExistenceSystem.KL22.admissible_iff_closure
 
 #print axioms ExistenceSystem.KL27.fold_eq_lucas
 #print axioms ExistenceSystem.KL27.diff_eq_sqrt5_fib
