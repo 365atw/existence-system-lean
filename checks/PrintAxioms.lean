@@ -61,6 +61,18 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL18.residual_tendsto_zero
 #print axioms ExistenceSystem.KL18.piswap_trace
 
+#print axioms ExistenceSystem.KL20.piParallel_coe_eq
+#print axioms ExistenceSystem.KL20.piPerp_coe_eq
+#print axioms ExistenceSystem.KL20.sigma_transfer
+#print axioms ExistenceSystem.KL20.rawT_mulVec_injective
+#print axioms ExistenceSystem.KL20.rawT_par
+#print axioms ExistenceSystem.KL20.rawT_perp
+#print axioms ExistenceSystem.KL20.joint_vanishing
+#print axioms ExistenceSystem.KL20.no_integer_relation
+#print axioms ExistenceSystem.KL20.parProj_lattice
+#print axioms ExistenceSystem.KL20.perp_inter_lattice_eq_zero
+#print axioms ExistenceSystem.KL20.parProj_injOn_lattice
+
 #print axioms ExistenceSystem.KL27.fold_eq_lucas
 #print axioms ExistenceSystem.KL27.diff_eq_sqrt5_fib
 #print axioms ExistenceSystem.KL27.no_rational_root

@@ -104,6 +104,30 @@ distinguished … the identity case cannot be located at one") is prose at that 
 hold for **every** `k`, which is exactly how the theorems are quantified, and that alone is encoded. The limit
 `r = 0` and KL12's *configuration* type (undefined in the Note) are not encoded.
 
+## KL20 — the Star Independence Lemma (`ExistenceSystem/KL20.lean`, §4.6 Lemma 1)
+
+Her statement (Note L124/L266/L647, verbatim): "π_∥ restricted to ℒ is injective; equivalently
+E_⊥ ∩ ℒ = {0}. The twelve-vector star admits no integer relation. Engine: irrationality of φ."
+Formalised over the merged star module (`ExistenceSystem.Icosahedral`) and `ℚ(√5)`
+(`ExistenceSystem.Quadratic`), proved with no `sorry`, `admit`, or new axioms, as the Note's own
+proof (L649):
+
+- `no_integer_relation`: **KL20** — if the integer combination `∑ᵢ nᵢ Qᵢ` has vanishing parallel
+  projection (`piParallel (n·) = 0`), then `n = 0`
+- `sigma_transfer`: "applying σ termwise gives `∑ nᵢ Qᵢ^⊥ = 0`" — a vanishing `π_∥` forces a vanishing
+  `π_⊥`, via the one use of φ irrational (`Quadratic.embedPhi_injective`, `LinearIndependent ℤ ![1, φ]`)
+- `piParallel_coe_eq`, `piPerp_coe_eq`: `π_∥`/`π_⊥` of an integer vector is `ι_φ`/`ι_ψ` of one element of ℚ(√5)
+- `rawT_mulVec_injective`, `rawT_par`, `rawT_perp`, `joint_vanishing`: `π_∥ ⊕ π_⊥` is injective because
+  `det rawM = 40√5 ≠ 0` (§4.1, `Icosahedral.det_rawM`); if both projections of a real vector vanish it is `0`
+- `perp_inter_lattice_eq_zero`: the equivalent geometric form `E_⊥ ∩ ℒ = {0}` on the actual lattice `ℒ = A(ℤ⁶)`
+- `parProj_injOn_lattice`: the first clause — `π_∥` restricted to `ℒ` is injective (`Set.InjOn`)
+
+**Reading choices** (quoting the map `data/lean-scope-b/report.md`, KL20/G2). `π_∥`/`π_⊥` are the
+module's `piParallel`/`piPerp` on an integer coefficient vector (`∑ cᵢ qVecᵢ`); `parProj` is the
+physical projection of an actual vector of `ℝ⁶ = E_∥ ⊕ E_⊥` (its first three coordinates). The
+cut-and-project reading of injectivity (Baake–Moody–Richard–Sing [67], "Established, cited, never
+claimed", Note L272) and the numerical census of Appendix A.2 are not encoded.
+
 ## KL27 — The Exact and Free Theorem (`ExistenceSystem/KL27.lean`, §7.3)
 
 Her title (Note L138). Two parts, proved with no `sorry`, `admit`, or new axioms:
