@@ -1,0 +1,6 @@
+'ExistenceSystem.KL19.energyDensity_eq_of_freq_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL19.freq_eq_of_energyDensity_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL19.energyDensity_eq_of_liClass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL19.not_ranks_of_liClass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL19.no_better' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0
