@@ -197,34 +197,51 @@ The module states what the field is. "What the Pit is made of," and whether Port
 THE THING are the same, is her open question — not answered, not adjudicated. Report §7: those questions
 "are untouched by the theorems in §1–§5." `Summit` does not answer them.
 
-## Summit — the zero line of `ℚ(√−5)` (`ExistenceSystem/Summit.lean`)
+## Summit — the zero line of `ℚ(√−5)` (`ExistenceSystem/Summit*.lean`)
 
-The summit is not proved. `rh_one_piece` takes `Frontier` and does not discharge it.
+The summit is not proved. The top result is `rh_one_piece_strip` (`SummitStrip`). It takes one
+hypothesis, `stripZeroFree`, and does not discharge it.
 
 Closed with no `sorry`, `admit`, or new axiom:
 
 - `splitting_of_χ`: `2` and `5` ramify; `χ_{−20}(p) = 1` splits; `χ_{−20}(p) = −1` stays inert
-- `zetaProduct_trivialZero`, `zetaProduct_ne_zero_of_one_le_re`: the product `ζ(s) L(s, χ_{−20})`
-  vanishes at the negative integers and does not vanish for `Re s ≥ 1`
+- `halfPlane_holds` (`SummitHalfPlane`): `dedekindZeta K s = ζ(s) L(s, χ_{−20})` for `1 < Re s`. The
+  ideal count is multiplicative (`idealCount_mul`), and the splitting law gives its value at `p ^ k`
+  (`idealCount_split`, `idealCount_ramified`, `idealCount_inert`)
+- `continuation_unique`: every continuation of `ζ_K` to `ℂ ∖ {1}` is the product there;
+  `zetaProduct_isContinuation`: the product is one
+- `χ_neg20ℂ_isPrimitive`: `χ_{−20}` has conductor `20`
+- `nontrivialZero_one_sub`: the functional equations send a nontrivial zero `s` to the nontrivial
+  zero `1 − s`
+- `zetaProduct_trivialZero`, `zetaProduct_ne_zero_of_one_le_re`: the product vanishes at the
+  negative integers and does not vanish for `Re s ≥ 1`
 - `alphaForced`, `hasDerivAt_re_criticalPoint`: the critical ride `1/2 + it` has real part constantly
   `1/2`, and that coordinate's derivative is `0`
 - `noTerminatingOmega`: the imaginary part has no last value
 - `hasDerivAt_criticalTrajectory`, `criticalTangent_eq`: the tangent of the product along that ride
   exists at every finite `t`
+- `hasDerivAt_transverse`, `criticalTangent_eq_I_mul_transverse`: the tangent along the ride is `I`
+  times the derivative across it
+- `reflection_fixes_alpha`: the reflection `s ↦ 1 − s` pairs nontrivial zeros and fixes `Re s`
+  exactly on the ride
 
-`Frontier` is the exact remainder, and each clause is used:
+The exact remainder is `stripZeroFree`: `ζ(s) L(s, χ_{−20})` has no zero in `1/2 < Re s < 1`.
+`stripZeroFree_iff` proves it equivalent to `RiemannHypothesis ∧ dirichletZeroLine`. It is not
+weaker than RH. Compared with the first `Frontier`, `halfPlane` is gone (proved), and the regions
+`Re s < 1/2` and `Re s ≥ 1` are discharged by the machine. `frontier_of_stripZeroFree` and
+`stripZeroFree_of_frontier` show the two frontiers are equivalent, and `rh_one_piece` is kept.
 
-- `halfPlane`: `dedekindZeta K s = ζ(s) L(s, χ_{−20})` for `1 < Re s`. Mathlib defines both sides and
-  does not prove this. The splitting law is the Euler factor at each prime, not this identity.
-- `RiemannHypothesis`
-- `dirichletZeroLine`: a zero of `L(s, χ_{−20})` outside the negative odd integers has real part `1/2`
+Summit key (one candidate, captain confirmed 2026-10-23), arbitrated in `SummitStrip`:
 
-On `Re s > 1` the series equals the product only if `halfPlane` holds. The product is the meromorphic
-continuation of `ζ_K` once that identification is known. The identity theorem into the strip is not
-formalized, and a zero of Mathlib's `dedekindZeta` is not the statement of RH for `K`.
+- Along and across (`criticalTangent_eq_I_mul_transverse`): proved, reduces nothing. It holds for
+  every holomorphic function on every line.
+- Alpha under the reflection (`reflection_fixes_alpha`): proved. This reflection is what removed
+  `Re s < 1/2`.
+- Forcing every zero onto the ride: any `P` that implies the zero line implies
+  `RiemannHypothesis ∧ dirichletZeroLine`, so no such `P` is weaker than RH.
+  `TangentialExtrapolation` has a proved antecedent, so it is the zero line itself.
+- The tangent off the ride (Speiser 1934, for `ζ`: RH iff `ζ'` has no zero in `0 < Re s < 1/2`):
+  not in Mathlib and not formalized here. It is not a frontier clause.
 
-Summit key (one candidate, captain confirmed 2026-10-23). The antecedent of `TangentialExtrapolation`
-is `alphaForced` together with `noTerminatingOmega`, both proved. The consequent is the zero line, so
-the implication is not a cleaner reduction of `Frontier`, and `rh_one_piece` does not take it as a
-hypothesis. KL10 `conserved_coord` has this shape for a gradient flow and is not applied: this path
-is not that flow. KL10 is not imported.
+KL10 `conserved_coord` has the alpha's shape for a gradient flow and is not applied: the ride is not
+that flow. KL10 is not imported.

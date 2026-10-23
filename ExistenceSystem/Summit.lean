@@ -3,15 +3,18 @@ module
 /-
 SUMMIT — RH for `K = ℚ(√−5)`, from the arithmetic in `TheThing`.
 
-The summit is not proved. `rh_one_piece` is conditional on `Frontier`.
+The summit is not proved. `rh_one_piece` is conditional on `Frontier`. The reduced
+summit is `rh_one_piece_strip` in `SummitStrip`, conditional only on `stripZeroFree`.
 
 `dedekindZeta` in Mathlib is the Dirichlet series of ideal counts. Off absolute
 convergence that series is `0`, so "every zero of `dedekindZeta K` has real part
 `1/2`" is false, and `TheThing.dedekindZeta_factorization_gap` (an equality at
 every `s`) is the wrong statement of `ζ_K(s) = ζ(s) L(s, χ_{−20})`. The identity
-that can hold is `halfPlane`, the equality for `1 < Re s`. Extending it into the
-strip by the identity theorem is not formalized. Nontrivial zeros are zeros of
-the product `ζ(s) L(s, χ_{−20})`, excluding `s = 1` and the negative integers.
+that can hold is `halfPlane`, the equality for `1 < Re s`; it is proved as
+`halfPlane_holds` in `SummitHalfPlane`. Carried into the strip, every continuation of
+`ζ_K` to `ℂ ∖ {1}` is the product (`continuation_unique` in `SummitStrip`). Nontrivial
+zeros are zeros of the product `ζ(s) L(s, χ_{−20})`, excluding `s = 1` and the negative
+integers.
 
 SUMMIT KEY (captain confirmed, 2026-10-23) — add as ONE CANDIDATE APPROACH, not a given.
 
@@ -24,8 +27,8 @@ endless by design, no last point. The candidate asks whether that alpha, forced
 along `Re(s) = 1/2` with no terminating omega, pins every nontrivial zero to
 `Re(s) = 1/2`.
 
-KL9 is not a module in this repository. KL10 (`conserved_coord`, on
-`fm/kl10-conservation-g1`) is a linear coordinate constant along a gradient flow
+KL9 is not a module in this repository. KL10 (`ExistenceSystem/KL10.lean`,
+`conserved_coord`) is a linear coordinate constant along a gradient flow
 `ẋ = -Γ∇J`. That flow is not this trajectory, so KL10 is not imported and is not
 applied. What closes here is the same shape on the critical ride: the real part
 is constantly `1/2`, and its derivative is `0`. The ride's imaginary part has no
@@ -736,10 +739,9 @@ theorem zetaProduct_ne_zero_of_one_le_re {s : ℂ} (hs : 1 ≤ s.re) : zetaProdu
 
 /-- `ζ_K(s) = ζ(s) L(s, χ_{−20})` for `1 < Re s`.
 
-This is the Mathlib gap. The splitting law gives the Euler factor at each prime and
-does not identify Dirichlet-series coefficients for every `n`. `dedekindZeta` has no
-Euler-product theorem in this Mathlib. The old `∀ s` gap in `TheThing` is not this
-statement: off the half-plane the series definition is `0`. -/
+Mathlib does not prove this. `halfPlane_holds` (`SummitHalfPlane`) does, from the
+splitting law and the multiplicativity of the ideal count. The old `∀ s` gap in `TheThing`
+is not this statement: off the half-plane the series definition is `0`. -/
 def halfPlane : Prop :=
   ∀ s : ℂ, 1 < s.re → dedekindZeta K s = zetaProduct s
 
@@ -749,8 +751,10 @@ def dirichletZeroLine : Prop :=
   ∀ s : ℂ, DirichletCharacter.LFunction χ_neg20ℂ s = 0 →
     ¬ (∃ n : ℕ, s = -((2 * (n : ℂ)) + 1)) → s.re = 1 / 2
 
-/-- The exact frontier of the summit.
+/-- The first frontier of the summit.
 `halfPlane`, `RiemannHypothesis`, and `dirichletZeroLine` are each used by `rh_one_piece`.
+`halfPlane` is now `halfPlane_holds`, and `frontier_of_stripZeroFree` /
+`stripZeroFree_of_frontier` show this structure is equivalent to `stripZeroFree`.
 `TangentialExtrapolation` is not a clause: it does not reduce this frontier. -/
 structure Frontier : Prop where
   half : halfPlane

@@ -225,3 +225,11 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.Summit.idealCount_ramified
 #print axioms ExistenceSystem.Summit.idealCount_inert
 #print axioms ExistenceSystem.Summit.idealCountA_eq_zetaMul
+#print axioms ExistenceSystem.Summit.zetaProduct_isContinuation
+#print axioms ExistenceSystem.Summit.continuation_unique
+#print axioms ExistenceSystem.Summit.frontier_of_stripZeroFree
+#print axioms ExistenceSystem.Summit.stripZeroFree_of_frontier
+#print axioms ExistenceSystem.Summit.rh_one_piece_strip
+#print axioms ExistenceSystem.Summit.hasDerivAt_transverse
+#print axioms ExistenceSystem.Summit.criticalTangent_eq_I_mul_transverse
+#print axioms ExistenceSystem.Summit.reflection_fixes_alpha

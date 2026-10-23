@@ -1,10 +1,17 @@
 module
 
 /-
-SUMMIT — the reflection `s ↦ 1 − s` and the strip frontier.
+SUMMIT — the reflection `s ↦ 1 − s`, the continuation, and the strip frontier.
+
+The summit is not proved. `rh_one_piece_strip` is conditional on `stripZeroFree`.
 
 `χ_{−20}` is primitive of conductor `20`, so the functional equations of `ζ` and of
 `L(s, χ_{−20})` carry a nontrivial zero `s` of the product to the nontrivial zero `1 − s`.
+That removes `Re s < 1/2` from the frontier; `Re s ≥ 1` is Mathlib's nonvanishing.
+`halfPlane_holds` and the identity theorem make the product the unique continuation of
+`ζ_K` to `ℂ ∖ {1}`. What is left is `stripZeroFree`: no zero in `1/2 < Re s < 1`. By
+`stripZeroFree_iff` it is equivalent to `RiemannHypothesis ∧ dirichletZeroLine`, so the
+frontier is smaller in region and in clauses, not weaker in strength.
 -/
 
 public import ExistenceSystem.SummitHalfPlane
@@ -274,6 +281,100 @@ theorem continuation_eq_zetaProduct (hhalf : halfPlane) {F : ℂ → ℂ}
   intro s hs
   exact (hF.analyticOnNhd hU).eqOn_of_preconnected_of_eventuallyEq (hP.analyticOnNhd hU)
     hconn h2 hev hs
+
+/-- A continuation of `ζ_K` to `ℂ ∖ {1}`: differentiable there and equal to the
+Mathlib Dirichlet series `dedekindZeta K` on `Re s > 1`. -/
+def IsContinuation (F : ℂ → ℂ) : Prop :=
+  DifferentiableOn ℂ F {1}ᶜ ∧ ∀ s : ℂ, 1 < s.re → F s = dedekindZeta K s
+
+/-- The product `ζ(s) L(s, χ_{−20})` is a continuation of `ζ_K`. -/
+theorem zetaProduct_isContinuation : IsContinuation zetaProduct :=
+  ⟨fun _ hs => (differentiableAt_zetaProduct hs).differentiableWithinAt,
+    fun s hs => (halfPlane_holds s hs).symm⟩
+
+/-- Every continuation of `ζ_K` is the product on `ℂ ∖ {1}`. No hypothesis. -/
+theorem continuation_unique {F : ℂ → ℂ} (hF : IsContinuation F) :
+    ∀ s : ℂ, s ≠ 1 → F s = zetaProduct s :=
+  continuation_eq_zetaProduct halfPlane_holds hF.1 hF.2
+
+/-! ## The frontier, reduced -/
+
+/-- The old frontier follows from the strip clause. `halfPlane` is `halfPlane_holds`. -/
+theorem frontier_of_stripZeroFree (h : stripZeroFree) : Frontier :=
+  ⟨halfPlane_holds, (stripZeroFree_iff.1 h).1, (stripZeroFree_iff.1 h).2⟩
+
+/-- The strip clause follows from the old frontier. The two are equivalent. -/
+theorem stripZeroFree_of_frontier (h : Frontier) : stripZeroFree :=
+  stripZeroFree_iff.2 ⟨h.riemann, h.dirichlet⟩
+
+/-- Conditional summit. Not a proof of RH for `K`.
+
+The one hypothesis is `stripZeroFree`: no zero of `ζ(s) L(s, χ_{−20})` in
+`1/2 < Re s < 1`. Given it, every zero of every continuation of `ζ_K` off `s = 1` and off
+the negative integers has real part `1/2`. The half-plane identity and the uniqueness of the
+continuation are proved, not assumed. -/
+theorem rh_one_piece_strip (frontier : stripZeroFree) {F : ℂ → ℂ} (hF : IsContinuation F)
+    (s : ℂ) (hz : F s = 0) (hs1 : s ≠ 1) (htriv : ¬ ∃ n : ℕ, s = -((n : ℂ) + 1)) :
+    s.re = 1 / 2 := by
+  rw [continuation_unique hF s hs1] at hz
+  exact zeroLine_of_stripZeroFree frontier ⟨hz, hs1, htriv⟩
+
+/-! ## Summit key: the tangent along the ride and off it
+
+Each candidate below is stated and arbitrated by Lean.
+
+1. Along and across. The product is holomorphic off `s = 1`, so its derivative across the
+   ride (moving `Re s`) and its tangent along the ride (moving `t`) are one complex number up
+   to the factor `I`: `criticalTangent_eq_I_mul_transverse`. Proved. It reduces nothing: it is
+   a fact about every holomorphic function on every line.
+2. Alpha under the reflection. The functional equations pair a nontrivial zero `s` with
+   `1 − s`. The transverse coordinate `Re s` goes to `1 − Re s`, and it is fixed exactly at
+   `Re s = 1/2`, the alpha that `alphaForced` holds constant along the ride:
+   `reflection_fixes_alpha`. Proved. This is the reflection that removed `0 ≤ Re s < 1/2`
+   from the frontier.
+3. Forcing every zero onto the ride. Any statement `P` with `P → (every nontrivial zero has
+   real part 1/2)` implies `RiemannHypothesis ∧ dirichletZeroLine` by `stripZeroFree_iff`,
+   so no such `P` is weaker than RH. `TangentialExtrapolation` is this case: its antecedent is
+   proved, so it is the zero line itself.
+4. The tangent off the ride (Speiser). For `ζ` alone, Speiser (1934) proved that RH is
+   equivalent to `ζ'` having no zero in `0 < Re s < 1/2`. That theorem uses the argument
+   principle and is not in Mathlib. It is not formalized here, so no Lean proof links a
+   clause on the derivative to the zero line, and it is not a frontier clause.
+-/
+
+/-- The transverse line through `criticalPoint t`: `σ ↦ σ + i t`. -/
+def transversePoint (t σ : ℝ) : ℂ := (σ : ℂ) + (t : ℂ) * Complex.I
+
+lemma transversePoint_half (t : ℝ) : transversePoint t (1 / 2) = criticalPoint t := by
+  simp [transversePoint, criticalPoint]
+
+/-- The derivative of the product across the ride at `1/2 + it`. -/
+theorem hasDerivAt_transverse (t : ℝ) :
+    HasDerivAt (fun σ : ℝ => zetaProduct (transversePoint t σ))
+      (deriv zetaProduct (criticalPoint t)) (1 / 2) := by
+  have hline : HasDerivAt (transversePoint t) (1 : ℂ) (1 / 2) := by
+    have hof : HasDerivAt (fun σ : ℝ => (σ : ℂ)) (1 : ℂ) (1 / 2) :=
+      (hasDerivAt_id (1 / 2 : ℝ)).ofReal_comp
+    exact hof.add_const ((t : ℂ) * Complex.I)
+  have hζ : HasDerivAt zetaProduct (deriv zetaProduct (criticalPoint t))
+      (transversePoint t (1 / 2)) := by
+    rw [transversePoint_half]
+    exact (differentiableAt_zetaProduct (criticalPoint_ne_one t)).hasDerivAt
+  simpa [Function.comp_def] using hζ.comp (1 / 2 : ℝ) hline
+
+/-- Along equals `I` times across. -/
+theorem criticalTangent_eq_I_mul_transverse (t : ℝ) :
+    deriv criticalTrajectory t =
+      Complex.I * deriv (fun σ : ℝ => zetaProduct (transversePoint t σ)) (1 / 2) := by
+  rw [criticalTangent_eq, (hasDerivAt_transverse t).deriv, mul_comm]
+
+/-- The reflection pairs nontrivial zeros, and fixes the transverse coordinate exactly on
+the ride. -/
+theorem reflection_fixes_alpha {s : ℂ} (hs : NontrivialZero s) :
+    NontrivialZero (1 - s) ∧ ((1 - s).re = s.re ↔ s.re = 1 / 2) := by
+  refine ⟨nontrivialZero_one_sub hs, ?_⟩
+  rw [sub_re, one_re]
+  constructor <;> intro h <;> linarith
 
 end ExistenceSystem.Summit
 
