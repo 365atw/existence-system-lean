@@ -48,6 +48,13 @@ depending on an `open` scope.
 
 #print axioms ExistenceSystem.KL13.residual_pos
 
+#print axioms ExistenceSystem.KL16.sigmaIdeal_prime_pow
+#print axioms ExistenceSystem.KL16.sigmaIdeal_mul_coprime
+#print axioms ExistenceSystem.KL16.four_perfect_ideals
+#print axioms ExistenceSystem.KL16.sigma_orbits
+#print axioms ExistenceSystem.KL16.classical_perfect_numbers_do_not_lift
+#print axioms ExistenceSystem.KL16.KL16_four_perfect_ideals
+
 #print axioms ExistenceSystem.KL14.fixedPoint_eq_zero
 #print axioms ExistenceSystem.KL14.ascent_tendsto_zero
 
