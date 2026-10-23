@@ -308,3 +308,19 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL21.starMap_apply
 #print axioms ExistenceSystem.KL21.starMap_add
 #print axioms ExistenceSystem.KL21.starMap_zero
+
+#print axioms ExistenceSystem.KL6.ampPhasePerp_norm
+#print axioms ExistenceSystem.KL6.norm_mul_ampPhasePerp
+#print axioms ExistenceSystem.KL6.piPerp_sum
+#print axioms ExistenceSystem.KL6.monoPhasePerp_eq
+#print axioms ExistenceSystem.KL6.piPerp_zero_iff_closure
+#print axioms ExistenceSystem.KL6.admissible_phason_invariant
+#print axioms ExistenceSystem.KL6.phason_invariant_iff_closure
+#print axioms ExistenceSystem.KL6.uniform_shift_grad_zero
+#print axioms ExistenceSystem.KL6.elastic_uniform_invariant
+#print axioms ExistenceSystem.KL6.phasonTerm_const
+#print axioms ExistenceSystem.KL6.no_pinning_fderiv
+#print axioms ExistenceSystem.KL6.no_pinning_iteratedFDeriv
+#print axioms ExistenceSystem.KL6.perp_coefficient_zero
+#print axioms ExistenceSystem.KL6.summand_zero
+#print axioms ExistenceSystem.KL6.no_pinning
