@@ -36,6 +36,12 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL3.minimizers_ncard
 #print axioms ExistenceSystem.KL3.flow_eq_neg_deriv
 
+#print axioms ExistenceSystem.KL12.free
+#print axioms ExistenceSystem.KL12.bound
+#print axioms ExistenceSystem.KL12.free_iff_not_bound_of_nonneg
+#print axioms ExistenceSystem.KL12.residual_free
+#print axioms ExistenceSystem.KL12.not_bound_residual
+
 #print axioms ExistenceSystem.KL13.residual_pos
 
 #print axioms ExistenceSystem.KL14.fixedPoint_eq_zero
