@@ -128,6 +128,12 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL23.par_block_scalar
 #print axioms ExistenceSystem.KL23.two_rate
 
+#print axioms ExistenceSystem.KL17.preserves_splitting
+#print axioms ExistenceSystem.KL17.par_block_scalar
+#print axioms ExistenceSystem.KL17.perp_block_scalar
+#print axioms ExistenceSystem.KL17.isotropic_one_ratio
+#print axioms ExistenceSystem.KL17.same_ratio_every_direction
+
 #print axioms ExistenceSystem.Lucas.lucas
 #print axioms ExistenceSystem.Lucas.lucas_zero
 #print axioms ExistenceSystem.Lucas.lucas_one

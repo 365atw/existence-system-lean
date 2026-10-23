@@ -1,0 +1,6 @@
+'ExistenceSystem.KL17.preserves_splitting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL17.par_block_scalar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL17.perp_block_scalar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL17.isotropic_one_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL17.same_ratio_every_direction' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0
