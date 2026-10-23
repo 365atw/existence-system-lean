@@ -137,6 +137,36 @@ encoded, nor is the choice between the two readings of "`δ` reads `√5·F_{3k}
 carried as stated (the eigenspace and fold/difference identities use nothing from them beyond the shared
 objects).
 
+## KL19 — The NO BETTER Theorem (`ExistenceSystem/KL19.lean`, §4.8)
+
+Her title (Note L716; list form L122), an impossibility result: a finite-range interaction assigns
+energy patch by patch, so a configuration's energy density is a fixed function of its finite-patch
+frequencies; members of one local-isomorphism class have identical finite-patch frequencies;
+therefore no finite-range Hamiltonian — at any order, of any complexity — can rank them. Proved with
+no `sorry`, `admit`, or new axioms:
+
+- `energyDensity`: the finite sum `∑ p, freq p * e p` — the density a range-`R` interaction `e`
+  assigns to a configuration with `R`-patch frequencies `freq`. Finite local complexity is
+  `Fintype (Patch R)`, which is where the word *finite* is load-bearing.
+- `energyDensity_eq_of_freq_eq`: equal finite-patch frequencies give equal energy density for every
+  interaction (the heart, Note L716)
+- `freq_eq_of_energyDensity_eq`: the sharp converse — the finite-patch frequencies are *exactly*
+  what finite-range energy densities see (a complete invariant); probe with `Pi.single q 1`
+- `energyDensity_eq_of_liClass`, `not_ranks_of_liClass`, `no_better`: for two members of one LI class
+  no finite-range interaction ranks one below the other — "there is no better energy to be written"
+
+**Borrowed premise, carried as a hypothesis.** Her ledger (2026-08-20): "(Repetitivity and local
+indistinguishability of one LI class are established and cited [48, 49]; the consequence for
+finite-range Hamiltonians is the author's.)" The premise — members of one LI class have identical
+finite-patch frequencies — is **borrowed [48, 49]** and is the explicit hypothesis `LIClassEqualFreq`
+(`no_better` takes it as an argument; it is never proved and never an axiom). The consequence is hers.
+
+**Not encoded** (`data/lean-scope-b/G5.md` §5.5): "at any temperature" (the Note defines no
+thermodynamics for a fixed configuration); "drop the word *finite* … unbounded range can see the
+difference" (unbounded-range interactions are undefined); the point sets, the acceptance window
+(record note **H5(b)**, "the window is never defined, never shaped, never bounded"; hers to write)
+and the phason torus (**H5(a)**). The family is carried abstractly as a type `W`.
+
 ## Layer 0 — shared modules
 
 Infrastructure the later statements share. Each module is one definition. KL18 imports `Lucas`; KL27

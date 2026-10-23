@@ -233,3 +233,9 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.Summit.hasDerivAt_transverse
 #print axioms ExistenceSystem.Summit.criticalTangent_eq_I_mul_transverse
 #print axioms ExistenceSystem.Summit.reflection_fixes_alpha
+
+#print axioms ExistenceSystem.KL19.energyDensity_eq_of_freq_eq
+#print axioms ExistenceSystem.KL19.freq_eq_of_energyDensity_eq
+#print axioms ExistenceSystem.KL19.energyDensity_eq_of_liClass
+#print axioms ExistenceSystem.KL19.not_ranks_of_liClass
+#print axioms ExistenceSystem.KL19.no_better
