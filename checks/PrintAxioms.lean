@@ -263,3 +263,14 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL19.energyDensity_eq_of_liClass
 #print axioms ExistenceSystem.KL19.not_ranks_of_liClass
 #print axioms ExistenceSystem.KL19.no_better
+
+#print axioms ExistenceSystem.KL21.embedPsi_injective
+#print axioms ExistenceSystem.KL21.sigma_transfer_perp
+#print axioms ExistenceSystem.KL21.no_integer_relation_perp
+#print axioms ExistenceSystem.KL21.perpProj_lattice
+#print axioms ExistenceSystem.KL21.par_inter_lattice_eq_zero
+#print axioms ExistenceSystem.KL21.perpProj_injOn_lattice
+#print axioms ExistenceSystem.KL21.closure_transfer
+#print axioms ExistenceSystem.KL21.starMap_apply
+#print axioms ExistenceSystem.KL21.starMap_add
+#print axioms ExistenceSystem.KL21.starMap_zero
