@@ -207,3 +207,7 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.Summit.hasDerivAt_re_criticalPoint
 #print axioms ExistenceSystem.Summit.hasDerivAt_criticalTrajectory
 #print axioms ExistenceSystem.Summit.criticalTangent_eq
+#print axioms ExistenceSystem.KL10.inner_gradient_eq_zero
+#print axioms ExistenceSystem.KL10.hasDerivAt_coord
+#print axioms ExistenceSystem.KL10.conserved_coord
+#print axioms ExistenceSystem.KL10.conserved_along_neg_gradient
