@@ -1,0 +1,10 @@
+'ExistenceSystem.KL5.starVec_dot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL5.starVec_dot_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL5.starVec_dot_ne_neg_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL5.no_closed_triad' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL5.secondShell_sq_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL5.secondShell_sq_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL5.secondShell_ratio_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL5.shell_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL5.mixed_triad_long_not_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0
