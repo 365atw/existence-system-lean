@@ -1,0 +1,12 @@
+'ExistenceSystem.KL20.piParallel_coe_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL20.piPerp_coe_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL20.sigma_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL20.rawT_mulVec_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL20.rawT_par' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL20.rawT_perp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL20.joint_vanishing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL20.no_integer_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL20.parProj_lattice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL20.perp_inter_lattice_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL20.parProj_injOn_lattice' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0
