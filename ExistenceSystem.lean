@@ -17,4 +17,5 @@ public import ExistenceSystem.KL27
 public import ExistenceSystem.TheThing
 public import ExistenceSystem.Summit
 public import ExistenceSystem.KL10
+public import ExistenceSystem.SummitHalfPlane
 public import ExistenceSystem.SummitStrip

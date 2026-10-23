@@ -119,6 +119,10 @@ theorem χ_neg20_trichotomy {p : ℕ} [Fact p.Prime] :
     rw [hmul]
     exact hval
 
+lemma χ_neg20_int (n : ℤ) : χ_neg20ℂ n = (χ_neg20 n : ℂ) := by
+  rw [χ_neg20ℂ, MulChar.ringHomComp_apply]
+  simp
+
 theorem χ_neg20ℂ_odd : DirichletCharacter.Odd χ_neg20ℂ := by
   rw [DirichletCharacter.Odd, χ_neg20ℂ, MulChar.ringHomComp_apply]
   have h4 : ZMod.χ₄ (-1 : ℤ) = -1 := ZMod.χ₄_int_three_mod_four (by decide)

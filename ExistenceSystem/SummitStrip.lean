@@ -7,7 +7,7 @@ SUMMIT — the reflection `s ↦ 1 − s` and the strip frontier.
 `L(s, χ_{−20})` carry a nontrivial zero `s` of the product to the nontrivial zero `1 − s`.
 -/
 
-public import ExistenceSystem.Summit
+public import ExistenceSystem.SummitHalfPlane
 public import Mathlib.NumberTheory.LSeries.DirichletContinuation
 
 @[expose] public section
@@ -23,10 +23,6 @@ namespace ExistenceSystem.Summit
 open ExistenceSystem.TheThing NumberField
 
 /-! ## `χ_{−20}` is primitive -/
-
-lemma χ_neg20_int (n : ℤ) : χ_neg20ℂ n = (χ_neg20 n : ℂ) := by
-  rw [χ_neg20ℂ, MulChar.ringHomComp_apply]
-  simp
 
 lemma χ_neg20_one : χ_neg20 (1 : ℤ) = 1 := by
   simp
