@@ -211,3 +211,11 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL10.hasDerivAt_coord
 #print axioms ExistenceSystem.KL10.conserved_coord
 #print axioms ExistenceSystem.KL10.conserved_along_neg_gradient
+#print axioms ExistenceSystem.Summit.χ_neg20ℂ_isPrimitive
+#print axioms ExistenceSystem.Summit.nontrivialZero_one_sub
+#print axioms ExistenceSystem.Summit.riemannZeta_one_sub_eq_zero
+#print axioms ExistenceSystem.Summit.LFunction_one_sub_eq_zero
+#print axioms ExistenceSystem.Summit.riemannZeta_neg_odd_ne_zero
+#print axioms ExistenceSystem.Summit.zeroLine_of_stripZeroFree
+#print axioms ExistenceSystem.Summit.stripZeroFree_iff
+#print axioms ExistenceSystem.Summit.continuation_eq_zetaProduct
