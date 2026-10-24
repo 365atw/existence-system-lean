@@ -348,6 +348,16 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL6.summand_zero
 #print axioms ExistenceSystem.KL6.no_pinning
 
+#print axioms ExistenceSystem.KL4.neverCloses_iff_irrational
+#print axioms ExistenceSystem.KL4.goldenRatio_neverCloses
+#print axioms ExistenceSystem.KL4.two_cos_eq_inv_goldenRatio
+#print axioms ExistenceSystem.KL4.irrational_two_cos_two_pi_div_five
+#print axioms ExistenceSystem.KL4.two_cos_neverCloses
+#print axioms ExistenceSystem.KL4.goldenRatio_admitsLift
+#print axioms ExistenceSystem.KL4.not_admitsLift_of_transcendental
+#print axioms ExistenceSystem.KL4.discriminator
+#print axioms ExistenceSystem.KL4.goldenRatio_neverCloses_and_admitsLift
+#print axioms ExistenceSystem.KL4.never_closing_and_zero_cost
 #print axioms ExistenceSystem.KL8.normalFormLocus_volume_zero
 #print axioms ExistenceSystem.KL8.normalForm_degenerate_card
 #print axioms ExistenceSystem.KL8.bias_breaks_branches
