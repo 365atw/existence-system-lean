@@ -1,0 +1,12 @@
+'ExistenceSystem.KL9.lyapunov_rate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL9.lyapunov_nonpos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL9.lyapunov_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL9.trajectory_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL9.uniform_shift_grad_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL9.uniform_equilibrium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL9.uniform_equilibria_fill_Eperp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL9.flux_integral_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL9.mean_conserved' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL9.mean_conserved_of_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL9.relaxes_to_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0
