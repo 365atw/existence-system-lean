@@ -1,0 +1,9 @@
+'ExistenceSystem.KL8.normalFormLocus_volume_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL8.normalForm_degenerate_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL8.bias_breaks_branches' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL8.icosahedral_indifferent_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL8.symmetry_protected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL8.unbreakable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL8.identity_at_every_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL8.symmetry_protection_upgrade' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0

@@ -358,3 +358,11 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL4.discriminator
 #print axioms ExistenceSystem.KL4.goldenRatio_neverCloses_and_admitsLift
 #print axioms ExistenceSystem.KL4.never_closing_and_zero_cost
+#print axioms ExistenceSystem.KL8.normalFormLocus_volume_zero
+#print axioms ExistenceSystem.KL8.normalForm_degenerate_card
+#print axioms ExistenceSystem.KL8.bias_breaks_branches
+#print axioms ExistenceSystem.KL8.icosahedral_indifferent_full
+#print axioms ExistenceSystem.KL8.symmetry_protected
+#print axioms ExistenceSystem.KL8.unbreakable
+#print axioms ExistenceSystem.KL8.identity_at_every_order
+#print axioms ExistenceSystem.KL8.symmetry_protection_upgrade
