@@ -325,6 +325,13 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL7.phasonPhase_trivial_iff_closure
 #print axioms ExistenceSystem.KL7.physical_iff_phason
 #print axioms ExistenceSystem.KL7.no_admissible_perturbation_selects
+#print axioms ExistenceSystem.KL24.recipVec_sum
+#print axioms ExistenceSystem.KL24.monoPhasePerp_eq
+#print axioms ExistenceSystem.KL24.landau_term_phase_trivial
+#print axioms ExistenceSystem.KL24.landau_pointwise_w_independent
+#print axioms ExistenceSystem.KL24.landau_bare_partial_zero
+#print axioms ExistenceSystem.KL24.displayed_piStress
+#print axioms ExistenceSystem.KL24.gradient_only_divergence
 #print axioms ExistenceSystem.KL6.ampPhasePerp_norm
 #print axioms ExistenceSystem.KL6.norm_mul_ampPhasePerp
 #print axioms ExistenceSystem.KL6.piPerp_sum
