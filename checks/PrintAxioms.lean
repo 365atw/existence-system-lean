@@ -309,6 +309,22 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL21.starMap_add
 #print axioms ExistenceSystem.KL21.starMap_zero
 
+#print axioms ExistenceSystem.KL7.constant_on_free
+#print axioms ExistenceSystem.KL7.isMinOn_free
+#print axioms ExistenceSystem.KL7.fderiv_free_eq_zero
+#print axioms ExistenceSystem.KL7.free_deriv_is_zero_fun
+#print axioms ExistenceSystem.KL7.mixed_hessian_block_vanishes
+#print axioms ExistenceSystem.KL7.no_implicit_function_route
+#print axioms ExistenceSystem.KL7.factorsThrough_quotient
+#print axioms ExistenceSystem.KL7.par_perp_inner_zero
+#print axioms ExistenceSystem.KL7.par_inf_perp_eq_bot
+#print axioms ExistenceSystem.KL7.tensorChar_values
+#print axioms ExistenceSystem.KL7.no_identity_component
+#print axioms ExistenceSystem.KL7.piPerp_sum
+#print axioms ExistenceSystem.KL7.phasonPhase_eq
+#print axioms ExistenceSystem.KL7.phasonPhase_trivial_iff_closure
+#print axioms ExistenceSystem.KL7.physical_iff_phason
+#print axioms ExistenceSystem.KL7.no_admissible_perturbation_selects
 #print axioms ExistenceSystem.KL24.recipVec_sum
 #print axioms ExistenceSystem.KL24.monoPhasePerp_eq
 #print axioms ExistenceSystem.KL24.landau_term_phase_trivial
