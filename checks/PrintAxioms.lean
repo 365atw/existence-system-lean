@@ -356,3 +356,15 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL8.unbreakable
 #print axioms ExistenceSystem.KL8.identity_at_every_order
 #print axioms ExistenceSystem.KL8.symmetry_protection_upgrade
+
+#print axioms ExistenceSystem.KL25.stepStrength_nsmul
+#print axioms ExistenceSystem.KL25.barrier_eq
+#print axioms ExistenceSystem.KL25.barrier_nonneg
+#print axioms ExistenceSystem.KL25.barrier_le_of_area_le
+#print axioms ExistenceSystem.KL25.staircase_barrier_bounded
+#print axioms ExistenceSystem.KL25.staircase_barrier_isBigO
+#print axioms ExistenceSystem.KL25.single_step_wall_grows
+#print axioms ExistenceSystem.KL25.intermediate_at_bulk_energy
+#print axioms ExistenceSystem.KL25.intermediate_no_gradient
+#print axioms ExistenceSystem.KL25.energy_through_gradient
+#print axioms ExistenceSystem.KL25.staircase_bounded_barrier
