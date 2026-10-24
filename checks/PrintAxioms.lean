@@ -367,6 +367,17 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL8.identity_at_every_order
 #print axioms ExistenceSystem.KL8.symmetry_protection_upgrade
 
+#print axioms ExistenceSystem.KL9.lyapunov_rate
+#print axioms ExistenceSystem.KL9.lyapunov_nonpos
+#print axioms ExistenceSystem.KL9.lyapunov_eq_zero_iff
+#print axioms ExistenceSystem.KL9.trajectory_unique
+#print axioms ExistenceSystem.KL9.uniform_shift_grad_zero
+#print axioms ExistenceSystem.KL9.uniform_equilibrium
+#print axioms ExistenceSystem.KL9.uniform_equilibria_fill_Eperp
+#print axioms ExistenceSystem.KL9.flux_integral_zero
+#print axioms ExistenceSystem.KL9.mean_conserved
+#print axioms ExistenceSystem.KL9.mean_conserved_of_boundary
+#print axioms ExistenceSystem.KL9.relaxes_to_mean
 #print axioms ExistenceSystem.KL25.stepStrength_nsmul
 #print axioms ExistenceSystem.KL25.barrier_eq
 #print axioms ExistenceSystem.KL25.barrier_nonneg
