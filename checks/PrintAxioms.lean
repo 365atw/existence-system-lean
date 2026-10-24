@@ -378,3 +378,14 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL9.mean_conserved
 #print axioms ExistenceSystem.KL9.mean_conserved_of_boundary
 #print axioms ExistenceSystem.KL9.relaxes_to_mean
+#print axioms ExistenceSystem.KL25.stepStrength_nsmul
+#print axioms ExistenceSystem.KL25.barrier_eq
+#print axioms ExistenceSystem.KL25.barrier_nonneg
+#print axioms ExistenceSystem.KL25.barrier_le_of_area_le
+#print axioms ExistenceSystem.KL25.staircase_barrier_bounded
+#print axioms ExistenceSystem.KL25.staircase_barrier_isBigO
+#print axioms ExistenceSystem.KL25.single_step_wall_grows
+#print axioms ExistenceSystem.KL25.intermediate_at_bulk_energy
+#print axioms ExistenceSystem.KL25.intermediate_no_gradient
+#print axioms ExistenceSystem.KL25.energy_through_gradient
+#print axioms ExistenceSystem.KL25.staircase_bounded_barrier
