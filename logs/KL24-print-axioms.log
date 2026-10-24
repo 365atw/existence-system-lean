@@ -1,0 +1,8 @@
+'ExistenceSystem.KL24.recipVec_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL24.monoPhasePerp_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL24.landau_term_phase_trivial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL24.landau_pointwise_w_independent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL24.landau_bare_partial_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL24.displayed_piStress' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL24.gradient_only_divergence' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0
