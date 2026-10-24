@@ -1,0 +1,11 @@
+'ExistenceSystem.KL4.neverCloses_iff_irrational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL4.goldenRatio_neverCloses' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL4.two_cos_eq_inv_goldenRatio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL4.irrational_two_cos_two_pi_div_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL4.two_cos_neverCloses' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL4.goldenRatio_admitsLift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL4.not_admitsLift_of_transcendental' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL4.discriminator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL4.goldenRatio_neverCloses_and_admitsLift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.KL4.never_closing_and_zero_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0
