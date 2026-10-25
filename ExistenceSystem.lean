@@ -26,6 +26,7 @@ public import ExistenceSystem.Summit
 public import ExistenceSystem.KL10
 public import ExistenceSystem.SummitHalfPlane
 public import ExistenceSystem.SummitStrip
+public import ExistenceSystem.SummitFrontiers
 public import ExistenceSystem.KL19
 public import ExistenceSystem.KL21
 public import ExistenceSystem.KL7

@@ -301,3 +301,28 @@ Summit key (one candidate, captain confirmed 2026-10-23), arbitrated in `SummitS
 
 KL10 `conserved_coord` has the alpha's shape for a gradient flow and is not applied: the ride is not
 that flow. KL10 is not imported.
+
+### The one lock, three faces (`ExistenceSystem/SummitFrontiers.lean`)
+
+`stripZeroFree` is the summit's single undischarged seam. `SummitFrontiers` records the captain's two
+routes (scout report `data/summit-force-s1/report.md`) as named frontiers in the KL16/KL19 discipline —
+each a named `Prop` with a proved adapter to `stripZeroFree`, never a `sorry`, never a false reduction.
+It claims no RH and proves no RH; the summit chain is untouched.
+
+- `stripZeroFree_iff_zeroLine`: the backbone adapter, fully proved — the strip clause is exactly "every
+  nontrivial zero of `ζ · L(χ_{−20})` has `Re = 1/2`" (`ZeroLine`). All three faces route through it.
+- Route 1, positivity (Li / Bombieri–Lagarias): `LiPositive` — every Keiper–Li coefficient `λ_n^K ≥ 0`.
+  The criterion `λ_n ≥ 0 ∀n ⟺ RH for K` is open prior art (Li 1997; Bombieri–Lagarias 1999; not in
+  Mathlib), carried as the named cited hypothesis `LiCriterion`. `liPositive_iff_stripZeroFree` composes
+  it with `stripZeroFree_iff`; the record is that this positivity face is RH-strength.
+- Route 1, operator (Hilbert–Pólya / de Branges): `HilbertPolyaCorrespondence` — a symmetric operator
+  whose spectrum carries the zeros. The construction is the open problem and is never built; the genuine
+  content is proved — a symmetric operator has real spectrum (`conj_eigenvalue_eq_self`), so a real
+  spectral parameter `γ` forces `Re = 1/2` (`zeroLine_of_hilbertPolya`, adapter
+  `stripZeroFree_of_hilbertPolya`, an implication).
+- Route 2, counting (method of carrying): `ZeroCount` carries the discreteness of the zeros (finitely
+  many up to each height — a genuine theorem, not in Mathlib for this product; the KL16 `SplittingData`
+  pattern). From it `N`, `N₀`, and `CountsAgree` (`N₀(T) = N(T) ∀T`) are defined and
+  `countsAgree_iff_stripZeroFree` is fully proved. The functional-equation symmetry gives `N(T)` but is
+  blind to on/off-line (off-line zeros come in line-symmetric pairs that count identically), so this face
+  is the lock, not a lever — recorded in prose, not graded.
