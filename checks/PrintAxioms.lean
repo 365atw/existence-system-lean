@@ -389,3 +389,15 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL25.intermediate_no_gradient
 #print axioms ExistenceSystem.KL25.energy_through_gradient
 #print axioms ExistenceSystem.KL25.staircase_bounded_barrier
+
+#print axioms ExistenceSystem.KL26.walk_unbiased
+#print axioms ExistenceSystem.KL26.mean_square_displacement
+#print axioms ExistenceSystem.KL26.total_walk_variance
+#print axioms ExistenceSystem.KL26.unbiased_random_walk
+#print axioms ExistenceSystem.KL26.selector_zero_bits
+#print axioms ExistenceSystem.KL26.forgetting_rate_vanishes
+#print axioms ExistenceSystem.KL26.thermodynamic_limit_conservation
+#print axioms ExistenceSystem.KL26.omDensity_nonneg
+#print axioms ExistenceSystem.KL26.omDensity_eq_zero_iff
+#print axioms ExistenceSystem.KL26.omDensity_minimiser
+#print axioms ExistenceSystem.KL26.zero_noise_minimiser_is_gradient_flow
