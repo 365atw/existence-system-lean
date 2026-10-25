@@ -35,8 +35,9 @@ exactly where it sits.
   (Report §3, §6.2.)
 - Route 2, counting (method of carrying). `ZeroCount` carries the discreteness of the zeros (finitely
   many up to each height — a genuine theorem, not in Mathlib for this product; carried as a named
-  structure, the KL16 `SplittingData` pattern). From it the on-line count `N₀(T)` and total count
-  `N(T)` are defined and the adapter `forall_N₀_eq_N_iff_stripZeroFree` is PROVED:
+  structure, the KL16 `SplittingData` pattern). From it the on-line count `N₀(T)`, total count
+  `N(T)`, and the `Prop` `CountsAgree` (`N₀(T) = N(T) ∀T`) are defined and the adapter
+  `countsAgree_iff_stripZeroFree` is PROVED:
   `N₀(T) = N(T) ∀T ⟺ stripZeroFree`. The functional-equation symmetry gives `N(T)` as a global
   invariant but is blind to on/off-line, because off-line zeros occur in line-symmetric pairs that
   contribute to `N(T)` identically to on-line ones (report §4) — that blindness is why the counting
