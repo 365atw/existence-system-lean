@@ -21,6 +21,7 @@
 'ExistenceSystem.Summit.continuation_eq_zetaProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ExistenceSystem.Summit.idealCount_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ExistenceSystem.Summit.halfPlane_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Summit.dedekindZeta_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ExistenceSystem.Summit.idealCount_split' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ExistenceSystem.Summit.idealCount_ramified' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ExistenceSystem.Summit.idealCount_inert' depends on axioms: [propext, Classical.choice, Quot.sound]

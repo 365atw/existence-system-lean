@@ -385,6 +385,20 @@ theorem halfPlane_holds : halfPlane := by
   refine LSeries_congr (fun {n} hn => ?_) s
   simp [toArithmeticFunction, hn]
 
+/-- Report §4 / The One Piece: `ζ_K(s) = ζ(s) · L(s, χ_{−20})` for `1 < Re s`.
+
+The honest factorization. Mathlib's `dedekindZeta K` is the Dirichlet series of ideal
+counts; it equals the product exactly on the half-plane of absolute convergence
+`1 < Re s`. Off that half-plane the series is `0`, so the unrestricted `∀ s` form is
+false — this is why the domain hypothesis is the honest one. The proof reuses
+`halfPlane_holds` (the splitting law and the multiplicativity of the ideal count) and
+rebuilds nothing. The character identity `χ_{−20} = χ_{−4} · χ₅`
+(`TheThing.χ_neg20_eq_mul`) is the exact spot where `√5`, through `χ₅`, enters `ζ_K`. -/
+theorem dedekindZeta_factorization (s : ℂ) (hs : 1 < s.re) :
+    dedekindZeta K s = riemannZeta s * DirichletCharacter.LFunction χ_neg20ℂ s := by
+  have h := halfPlane_holds s hs
+  rwa [zetaProduct] at h
+
 end ExistenceSystem.Summit
 
 end

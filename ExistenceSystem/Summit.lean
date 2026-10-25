@@ -8,10 +8,10 @@ summit is `rh_one_piece_strip` in `SummitStrip`, conditional only on `stripZeroF
 
 `dedekindZeta` in Mathlib is the Dirichlet series of ideal counts. Off absolute
 convergence that series is `0`, so "every zero of `dedekindZeta K` has real part
-`1/2`" is false, and `TheThing.dedekindZeta_factorization_gap` (an equality at
-every `s`) is the wrong statement of `ζ_K(s) = ζ(s) L(s, χ_{−20})`. The identity
-that can hold is `halfPlane`, the equality for `1 < Re s`; it is proved as
-`halfPlane_holds` in `SummitHalfPlane`. Carried into the strip, every continuation of
+`1/2`" is false, and an equality at every `s` is the wrong statement of
+`ζ_K(s) = ζ(s) L(s, χ_{−20})`. The identity that holds is `halfPlane`, the equality for
+`1 < Re s`; it is proved as `halfPlane_holds` in `SummitHalfPlane` and stated in the
+report's surface form as `dedekindZeta_factorization`. Carried into the strip, every continuation of
 `ζ_K` to `ℂ ∖ {1}` is the product (`continuation_unique` in `SummitStrip`). Nontrivial
 zeros are zeros of the product `ζ(s) L(s, χ_{−20})`, excluding `s = 1` and the negative
 integers.

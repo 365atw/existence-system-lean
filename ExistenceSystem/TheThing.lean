@@ -1480,8 +1480,8 @@ theorem p₃'_class_eq_p₂ :
 
 Report §4: "`χ_{−20} = χ_{−4} · χ₅`", with conductors 20, 4, and 5.
 Mathlib names `ZMod.χ₄` and does not name `χ₅`. `χ₅` is defined here.
-The product is proved below. The identity `ζ_K(s) = ζ(s) · L(s, χ_{−20})` is not a
-Mathlib theorem; `dedekindZeta_factorization_gap` records that missing statement. -/
+The product is proved below. The identity `ζ_K(s) = ζ(s) · L(s, χ_{−20})` is proved, on
+its honest domain `1 < Re s`, as `Summit.dedekindZeta_factorization` (`SummitHalfPlane`). -/
 
 instance : Fact (Nat.Prime 5) := ⟨Nat.prime_five⟩
 
@@ -1551,13 +1551,15 @@ theorem three_char_eq_one {n : ℤ} (h : IsCoprime n (Nat.lcm 4 5)) :
 noncomputable def χ_neg20ℂ : DirichletCharacter ℂ (Nat.lcm 4 5) :=
   χ_neg20.ringHomComp (Int.castRingHom ℂ)
 
-/-- Report §4: `ζ_K(s) = ζ(s) · L(s, χ_{−20})`.
+/-! Report §4: `ζ_K(s) = ζ(s) · L(s, χ_{−20})`.
 
-Mathlib defines `dedekindZeta` and `DirichletCharacter.LFunction`. It does not prove
-this identity for `K = ℚ(√−5)`. This definition is that missing statement. It is a
-proposition, not an axiom, and it is not proved here. -/
-def dedekindZeta_factorization_gap : Prop :=
-  ∀ s : ℂ, dedekindZeta K s = riemannZeta s * DirichletCharacter.LFunction χ_neg20ℂ s
+Mathlib defines `dedekindZeta` and `DirichletCharacter.LFunction` but does not prove this
+identity for `K = ℚ(√−5)`. It is proved here, on its honest domain `1 < Re s` — the
+half-plane of absolute convergence of Mathlib's Dirichlet-series `dedekindZeta K` — as
+`Summit.dedekindZeta_factorization` in `ExistenceSystem/SummitHalfPlane.lean`, reusing the
+splitting law (`Summit.halfPlane_holds`). The unrestricted `∀ s` form is false: off the
+half-plane the series is `0`. The character identity `χ_neg20_eq_mul` above is the exact
+spot where `√5`, through `χ₅`, enters `ζ_K`. -/
 
 /-! ## The primes 7, 67, and 107 -/
 
