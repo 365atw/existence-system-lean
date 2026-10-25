@@ -279,6 +279,7 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.Summit.continuation_eq_zetaProduct
 #print axioms ExistenceSystem.Summit.idealCount_mul
 #print axioms ExistenceSystem.Summit.halfPlane_holds
+#print axioms ExistenceSystem.Summit.dedekindZeta_factorization
 #print axioms ExistenceSystem.Summit.idealCount_split
 #print axioms ExistenceSystem.Summit.idealCount_ramified
 #print axioms ExistenceSystem.Summit.idealCount_inert
