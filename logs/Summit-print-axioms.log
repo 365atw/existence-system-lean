@@ -34,4 +34,13 @@
 'ExistenceSystem.Summit.hasDerivAt_transverse' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ExistenceSystem.Summit.criticalTangent_eq_I_mul_transverse' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ExistenceSystem.Summit.reflection_fixes_alpha' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Summit.stripZeroFree_iff_zeroLine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Summit.liPositive_iff_stripZeroFree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Summit.zeroLine_of_liPositive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Summit.zeroLine_of_hilbertPolya' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Summit.stripZeroFree_of_hilbertPolya' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Summit.ZeroCount.N₀_le_N' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Summit.countsAgree_iff_zeroLine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Summit.countsAgree_iff_stripZeroFree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.Summit.countsAgree_iff_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
 exit=0
