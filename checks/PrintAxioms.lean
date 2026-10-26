@@ -303,6 +303,45 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.Summit.countsAgree_iff_stripZeroFree
 #print axioms ExistenceSystem.Summit.countsAgree_iff_RH
 
+#print axioms ExistenceSystem.Summit.nontrivialZero_re_lt_one
+#print axioms ExistenceSystem.Summit.nontrivialZero_re_pos
+#print axioms ExistenceSystem.Summit.zetaProduct_ne_zero_near_one
+#print axioms ExistenceSystem.Summit.nontrivialZero_finite
+#print axioms ExistenceSystem.Summit.zeroCount
+#print axioms ExistenceSystem.Summit.countsAgree_iff_stripZeroFree'
+#print axioms ExistenceSystem.Summit.countsAgree_iff_RH'
+
+#print axioms ExistenceSystem.Summit.Diagonal.mulOp_isSymmetric
+#print axioms ExistenceSystem.Summit.Diagonal.mulOp_basisVec
+#print axioms ExistenceSystem.Summit.hilbertPolyaExists_of_zeroLine
+#print axioms ExistenceSystem.Summit.stripZeroFree_iff_hilbertPolyaExists
+
+#print axioms ExistenceSystem.Summit.χ_neg4ℂ_isPrimitive
+#print axioms ExistenceSystem.Summit.χ₅ℂ_isPrimitive
+#print axioms ExistenceSystem.Summit.gauss_χ_neg4ℂ
+#print axioms ExistenceSystem.Summit.gauss_χ₅ℂ
+#print axioms ExistenceSystem.Summit.gauss_χ_neg20ℂ
+#print axioms ExistenceSystem.Summit.rootNumber_χ_neg4ℂ
+#print axioms ExistenceSystem.Summit.rootNumber_χ₅ℂ
+#print axioms ExistenceSystem.Summit.rootNumber_χ_neg20ℂ
+#print axioms ExistenceSystem.Summit.completedProductK_one_sub
+#print axioms ExistenceSystem.Summit.completedProductGenus_one_sub
+#print axioms ExistenceSystem.Summit.completedEpstein_one_sub
+#print axioms ExistenceSystem.Summit.epstein_same_functionalEquation_as_K
+#print axioms ExistenceSystem.Summit.completedEpstein_eq_gamma_mul
+#print axioms ExistenceSystem.Summit.funEq_not_force_zeroLine
+
+#print axioms ExistenceSystem.Summit.lseries_zetaProduct
+#print axioms ExistenceSystem.Summit.lseries_genus
+#print axioms ExistenceSystem.Summit.epsteinPrincipal_eq_lseries
+#print axioms ExistenceSystem.Summit.coeffK_isMultiplicative
+#print axioms ExistenceSystem.Summit.coeffGenus_isMultiplicative
+#print axioms ExistenceSystem.Summit.coeffEpstein_not_isMultiplicative
+#print axioms ExistenceSystem.Summit.euler_product_discriminates
+
+#print axioms ExistenceSystem.Summit.not_twinStripZeroFree
+#print axioms ExistenceSystem.Summit.strip_no_go
+
 #print axioms ExistenceSystem.KL19.energyDensity_eq_of_freq_eq
 #print axioms ExistenceSystem.KL19.freq_eq_of_energyDensity_eq
 #print axioms ExistenceSystem.KL19.energyDensity_eq_of_liClass

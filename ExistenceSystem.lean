@@ -27,6 +27,11 @@ public import ExistenceSystem.KL10
 public import ExistenceSystem.SummitHalfPlane
 public import ExistenceSystem.SummitStrip
 public import ExistenceSystem.SummitFrontiers
+public import ExistenceSystem.SummitDiscrete
+public import ExistenceSystem.SummitHilbertPolya
+public import ExistenceSystem.SummitEpstein
+public import ExistenceSystem.SummitEuler
+public import ExistenceSystem.SummitTwinStrip
 public import ExistenceSystem.KL19
 public import ExistenceSystem.KL21
 public import ExistenceSystem.KL7

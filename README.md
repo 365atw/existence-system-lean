@@ -326,3 +326,35 @@ It claims no RH and proves no RH; the summit chain is untouched.
   `countsAgree_iff_stripZeroFree` is fully proved. The functional-equation symmetry gives `N(T)` but is
   blind to on/off-line (off-line zeros come in line-symmetric pairs that count identically), so this face
   is the lock, not a lever — recorded in prose, not graded.
+
+### The lock pinned (`SummitDiscrete`, `SummitHilbertPolya`, `SummitEpstein`, `SummitEuler`, `SummitTwinStrip`)
+
+Five modules from the bounded RH hunt (`rh-hunt-a1`). They claim no RH and prove no RH; `stripZeroFree`
+is untouched. What they do is show that each route is either the lock itself or blind to it.
+
+- `SummitDiscrete` proves the discreteness `SummitFrontiers` carried. A nontrivial zero has
+  `0 < Re s < 1` (`nontrivialZero_re_pos`, `nontrivialZero_re_lt_one`). No zeros accumulate at the pole.
+  Finitely many lie below each height (`nontrivialZero_finite`). So `zeroCount : ZeroCount` is built, and
+  `countsAgree_iff_stripZeroFree'` holds with no carried hypothesis.
+- `SummitHilbertPolya` makes the operator face an equivalence:
+  `stripZeroFree_iff_hilbertPolyaExists`. The converse is tautological. On the zero line, the diagonal
+  operator on `ℓ²(zeros)` with weight `Im s` is a symmetric Hilbert–Pólya operator built from the zeros.
+  Only an operator constructed without the zeros could be a lever.
+- `SummitEpstein` builds the twin `Z₁ = ½[ζ L(χ_{−20}) + L(χ_{−4}) L(χ₅)]`, the Epstein zeta of the norm
+  form `x² + 5y²` of `ℤ[√−5]` (the coefficient identity is genus theory, prose here). It proves the Gauss
+  sums `2i`, `√5`, `2i√5` by hand; the `√5` goes through `cos(2π/5) = (√5 − 1)/4`, the fact KL4 states
+  as `2cos(2π/5) = 1/φ`. All three root numbers are `1`. The twin obeys exactly `ζ_K`'s completed
+  functional equation `Λ(1 − s) = 20^(s − 1/2) Λ(s)` with the same gamma factor
+  (`epstein_same_functionalEquation_as_K`, `completedEpstein_eq_gamma_mul`). Given the carried
+  `DavenportHeilbronnEpstein` (a zero with `Re s > 1`), `funEq_not_force_zeroLine`.
+- `SummitEuler`: both are Dirichlet series on `Re s > 1`. `ζ_K`'s coefficients `1 ⍟ χ_{−20}` are
+  multiplicative and the twin's are not (`a(2) = a(3) = 0`, `a(6) = 2`): `euler_product_discriminates`.
+- `SummitTwinStrip`: given the carried `EpsteinStripZero` (a zero with `0.93 < Re s < 0.94`), the twin's
+  strip clause is false (`not_twinStripZeroFree`, `strip_no_go`).
+
+Both carried zeros are certified outside Lean by an interval-arithmetic (Arb) argument-principle
+certificate. The witnesses are `0.9329696974854141 + 15.668249531278473 i` (winding `1 ± 5e-43` on a
+square of half-side `2⁻⁴⁰`) and `1.01104933… + 1193.94640… i` (winding `1 ± 1.3e-49`). The trust base is
+Arb, not Lean; scripts and outputs are in the firstmate record `data/rh-hunt-a1/`. Reading: no argument
+that uses only the functional equation, gamma factor, conductor, or the carrier's phase can prove
+`stripZeroFree`. A proof must consume the multiplicativity of the ideal counts, the Euler product.
