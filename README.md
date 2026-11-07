@@ -191,6 +191,25 @@ difference" (unbounded-range interactions are undefined); the point sets, the ac
 (record note **H5(b)**, "the window is never defined, never shaped, never bounded"; hers to write)
 and the phason torus (**H5(a)**). The family is carried abstractly as a type `W`.
 
+## Near-admissibility — the ε-sibling of KL22 (`ExistenceSystem/NearAdmissibility.lean`)
+
+Kari A Light's statement, locked 2026-11-06: "A state is admissible to within ε on a window of length T
+exactly when its twist is no bigger than about ε/T. The states that pass this test but fail exact
+invariance are precisely the near-misses."
+
+- `phase_near_trivial_iff`: for `T > 0` and `0 ≤ ε < 2`, `e^{iuL}` stays within `ε` of `1` on `[0, T]`
+  iff `|L| ≤ 2·arcsin(ε/2)/T`. It is `KL22.phase_trivial_iff` with the same one-point evaluation, cut
+  down to fit the window. For `ε ≥ 2` the test passes every `L`, so the range is needed.
+- `NearMiss`: passes the test and `L ≠ 0`, the imperfect bifurcations of an exact closure.
+- `nearMiss_near_closure`: for triple products `A, B ∈ [M³, 8M³]` of the plain short sum with
+  `L = log(B/A)`, every near-miss has `1 ≤ |B − A| ≤ 8·M³·ε'/T`, and every pair with
+  `1 ≤ |B − A| ≤ M³·ε'/T` is a near-miss. `near_band_at_critical`: at `τ = 14/5` the band `M³/T` is
+  `X^{1/15}`.
+- `phase_trivial_iff_window`: her hypothesis is the `ε = 0` test in every direction, on any one window.
+
+This names the near-misses. It does not bound their count, does not prove SC or AC(β), does not lower
+the ceiling, and makes no claim about the Riemann hypothesis. The sum itself is not built.
+
 ## Layer 0 — shared modules
 
 Infrastructure the later statements share. Each module is one definition. KL18 imports `Lucas`; KL27
