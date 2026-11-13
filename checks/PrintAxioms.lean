@@ -412,3 +412,13 @@ depending on an `open` scope.
 #print axioms ExistenceSystem.KL26.omDensity_eq_zero_iff
 #print axioms ExistenceSystem.KL26.omDensity_minimiser
 #print axioms ExistenceSystem.KL26.zero_noise_minimiser_is_gradient_flow
+
+#print axioms ExistenceSystem.NearAdmissibility.windowModulus_lt_pi
+#print axioms ExistenceSystem.NearAdmissibility.norm_phase_sub_one_le_iff
+#print axioms ExistenceSystem.NearAdmissibility.phase_near_trivial_iff
+#print axioms ExistenceSystem.NearAdmissibility.nearMiss_iff
+#print axioms ExistenceSystem.NearAdmissibility.gap_div_le_closurePhase
+#print axioms ExistenceSystem.NearAdmissibility.closurePhase_le_gap_div
+#print axioms ExistenceSystem.NearAdmissibility.nearMiss_near_closure
+#print axioms ExistenceSystem.NearAdmissibility.near_band_at_critical
+#print axioms ExistenceSystem.NearAdmissibility.phase_trivial_iff_window

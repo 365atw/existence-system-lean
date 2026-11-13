@@ -1,0 +1,10 @@
+'ExistenceSystem.NearAdmissibility.windowModulus_lt_pi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.NearAdmissibility.norm_phase_sub_one_le_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.NearAdmissibility.phase_near_trivial_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.NearAdmissibility.nearMiss_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.NearAdmissibility.gap_div_le_closurePhase' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.NearAdmissibility.closurePhase_le_gap_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.NearAdmissibility.nearMiss_near_closure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.NearAdmissibility.near_band_at_critical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExistenceSystem.NearAdmissibility.phase_trivial_iff_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0
